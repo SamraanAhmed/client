@@ -1,0 +1,246 @@
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X, Phone, Calendar, Moon, Sun } from 'lucide-react'
+import Logo from '../common/Logo'
+import Button from '../ui/Button'
+import { useAuth } from '../../contexts/AuthContext'
+import { useTheme } from '../../contexts/ThemeContext'
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
+  const { user, logout } = useAuth()
+  const { isDark, toggleTheme } = useTheme()
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Specialists', href: '/specialists' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Testimonials', href: '/testimonials' },
+    { name: 'Contact', href: '/contact' },
+  ]
+
+  const isActive = (path) => location.pathname === path
+
+  const handleLogout = () => {
+    logout()
+    setIsMenuOpen(false)
+  }
+
+  return (
+    <header className="sticky top-0 z-50 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <Logo className="h-10 w-auto" variant={isDark ? 'white' : 'default'} />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                  isActive(item.href)
+                    ? 'text-primary-600 dark:text-primary-400'
+                    : 'text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400'
+                }`}
+              >
+                {item.name}
+                {isActive(item.href) && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-500"
+                  />
+                )}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Desktop Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+
+            {/* Emergency Call */}
+            <Button
+              variant="ghost"
+              size="sm"
+              icon={<Phone size={16} />}
+              href="tel:+1-555-123-4567"
+              className="text-accent-teal"
+            >
+              Emergency
+            </Button>
+
+            {user ? (
+              <div className="flex items-center space-x-3">
+                <Link
+                  to="/dashboard"
+                  className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600"
+                >
+                  Dashboard
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="text-sm font-medium text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <div className="flex items-center space-x-3">
+                <Link
+                  to="/login"
+                  className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600"
+                >
+                  Login
+                </Link>
+                <Button as={Link} to="/signup" variant="secondary" size="sm">
+                  Sign Up
+                </Button>
+              </div>
+            )}
+
+            {/* Book Appointment CTA */}
+            <Button
+              as={Link}
+              to="/book"
+              variant="primary"
+              size="sm"
+              icon={<Calendar size={16} />}
+            >
+              Book Now
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 rounded-lg text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-700"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block px-3 py-2 text-base font-medium rounded-lg transition-colors ${
+                    isActive(item.href)
+                      ? 'text-primary-600 bg-primary-50 dark:text-primary-400 dark:bg-primary-900/20'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              <div className="pt-4 border-t border-neutral-200 dark:border-neutral-700 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-neutral-600 dark:text-neutral-400">Theme</span>
+                  <button
+                    onClick={toggleTheme}
+                    className="p-2 rounded-lg text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
+                  >
+                    {isDark ? <Sun size={20} /> : <Moon size={20} />}
+                  </button>
+                </div>
+
+                <Button
+                  variant="outline"
+                  fullWidth
+                  icon={<Phone size={16} />}
+                  href="tel:+1-555-123-4567"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Emergency Call
+                </Button>
+
+                {user ? (
+                  <div className="space-y-2">
+                    <Button
+                      variant="ghost"
+                      fullWidth
+                      as={Link}
+                      to="/dashboard"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Dashboard
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      fullWidth
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </Button>
+                  </div>
+                ) : (
+                  <div className="space-y-2">
+                    <Button
+                      variant="ghost"
+                      fullWidth
+                      as={Link}
+                      to="/login"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Login
+                    </Button>
+                    <Button
+                      variant="secondary"
+                      fullWidth
+                      as={Link}
+                      to="/signup"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Sign Up
+                    </Button>
+                  </div>
+                )}
+
+                <Button
+                  variant="primary"
+                  fullWidth
+                  icon={<Calendar size={16} />}
+                  as={Link}
+                  to="/book"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Book Appointment
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  )
+}
+
+export default Header
