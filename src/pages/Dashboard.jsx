@@ -11,6 +11,7 @@ import {
   FileText,
   Download,
   Edit,
+  X,
   Bell,
   CreditCard,
   MessageSquare,
