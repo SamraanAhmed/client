@@ -73,6 +73,18 @@ const Button = ({
     )
   }
 
+  if (Component !== 'button') {
+    return (
+      <Component
+        className={baseClasses}
+        onClick={onClick}
+        {...props}
+      >
+        {buttonContent}
+      </Component>
+    )
+  }
+
   return (
     <motion.button
       onClick={onClick}
