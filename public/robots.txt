@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://brightsmile-dental.com/sitemap.xml
+
+# Disallow private areas
+Disallow: /dashboard
+Disallow: /login
+Disallow: /signup
+Disallow: /admin
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /book
+Allow: /testimonials
+Allow: /pricing
+Allow: /specialists

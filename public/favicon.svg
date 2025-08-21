@@ -1,0 +1,16 @@
+<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tooth shape -->
+  <path
+    d="M16 6C19 6 22 7 22 11C22 16 22 22 19 25C17.5 26.5 14.5 26.5 13 25C10 22 10 16 10 11C10 7 13 6 16 6Z"
+    fill="#1C9DD9"
+  />
+  <!-- Highlight -->
+  <path
+    d="M16 8C18 8 20 8.5 20 11.5C20 15.5 20 20.5 18 23C17 24 15 24 14 23C12 20.5 12 15.5 12 11.5C12 8.5 14 8 16 8Z"
+    fill="#20C997"
+    opacity="0.3"
+  />
+  <!-- Sparkle -->
+  <circle cx="17" cy="11" r="1" fill="white" opacity="0.8" />
+  <circle cx="15" cy="14" r="0.5" fill="white" opacity="0.6" />
+</svg>
