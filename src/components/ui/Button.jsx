@@ -12,6 +12,7 @@ const Button = ({
   iconPosition = 'left',
   onClick,
   href,
+  as: Component = 'button',
   className = '',
   ...props
 }) => {
