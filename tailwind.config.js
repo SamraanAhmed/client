@@ -79,6 +79,10 @@ export default {
         'medium': '0 4px 25px 0 rgba(0, 0, 0, 0.15)',
         'hard': '0 10px 40px 0 rgba(0, 0, 0, 0.2)',
       },
+      scale: {
+        '102': '1.02',
+        '98': '0.98',
+      },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
