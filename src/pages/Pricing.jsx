@@ -210,7 +210,7 @@ const Pricing = () => {
     {
       icon: <CreditCard className="w-6 h-6 text-primary-500" />,
       title: 'Flexible Payment Plans',
-      description: 'Interest-free financing available for treatments over $500. Monthly payment plans up to 24 months.',
+      description: 'Interest-free financing available for treatments over PKR 140,000. Monthly payment plans up to 24 months.',
       features: ['0% APR for 12 months', 'Low monthly payments', 'Quick approval process']
     },
     {
@@ -538,7 +538,7 @@ const Pricing = () => {
             {[
               {
                 question: "Do you offer payment plans for expensive treatments?",
-                answer: "Yes! We offer interest-free financing for treatments over $500, with payment plans up to 24 months. We also work with third-party financing companies like CareCredit."
+                answer: "Yes! We offer interest-free financing for treatments over PKR 140,000, with payment plans up to 24 months. We also work with third-party financing companies like CareCredit."
               },
               {
                 question: "What if I don't have dental insurance?",
