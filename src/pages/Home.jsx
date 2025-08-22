@@ -194,11 +194,11 @@ const Home = () => {
               <Button
                 variant="primary"
                 size="lg"
-                icon={<MessageCircle size={20} />}
+                icon={<i className="fab fa-whatsapp text-xl"></i>}
                 href="https://wa.me/15551234567"
                 className="bg-green-500 hover:bg-green-600 text-white border-green-500 font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
-                💬 Chat on WhatsApp
+                Chat on WhatsApp
               </Button>
             </div>
           </motion.div>
