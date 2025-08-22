@@ -76,7 +76,7 @@ const About = () => {
 
   const certifications = [
     'American Dental Association (ADA)',
-    'New York State Dental Society',
+    'Pakistan Dental Association',
     'Academy of General Dentistry',
     'International Congress of Oral Implantologists',
     'American Association of Orthodontists',
@@ -145,7 +145,7 @@ const About = () => {
                 <p>
                   Karachi Dental Clinic was founded in 2010 with a simple mission: to provide 
                   exceptional dental care in a warm, welcoming environment. Dr. Sarah Johnson started 
-                  this practice after recognizing the need for patient-centered dental care in New York.
+                  this practice after recognizing the need for patient-centered dental care in Karachi.
                 </p>
                 <p>
                   Over the years, we've grown into a comprehensive dental practice serving thousands 
