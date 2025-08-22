@@ -566,21 +566,21 @@ const ServiceDetail = () => {
                   className="block p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
                 >
                   <div className="font-medium text-neutral-900 dark:text-white">General Checkup</div>
-                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at $150</div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at PKR 42,000</div>
                 </Link>
                 <Link 
                   to="/services/teeth-whitening" 
                   className="block p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
                 >
                   <div className="font-medium text-neutral-900 dark:text-white">Teeth Whitening</div>
-                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at $400</div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at PKR 112,000</div>
                 </Link>
                 <Link 
                   to="/services/orthodontics" 
                   className="block p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
                 >
                   <div className="font-medium text-neutral-900 dark:text-white">Orthodontics</div>
-                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at $3,500</div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at PKR 980,000</div>
                 </Link>
               </div>
               <Link 
