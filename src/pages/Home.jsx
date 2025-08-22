@@ -192,13 +192,13 @@ const Home = () => {
                 Call Us Now
               </Button>
               <Button
-                variant="ghost"
+                variant="primary"
                 size="lg"
-                icon={<MessageCircle size={20} />}
+                icon={<i className="fab fa-whatsapp text-xl"></i>}
                 href="https://wa.me/15551234567"
-                className="text-accent-teal border-accent-teal hover:bg-accent-teal hover:text-white"
+                className="bg-green-500 hover:bg-green-600 text-white border-green-500 font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
-                WhatsApp
+                Chat on WhatsApp
               </Button>
             </div>
           </motion.div>
@@ -286,7 +286,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold font-heading text-neutral-900 dark:text-white mb-6">
-              Why Choose BrightSmile?
+              Why Choose Krachi?
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
               We're committed to providing exceptional dental care in a comfortable, modern environment.

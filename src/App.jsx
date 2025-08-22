@@ -4,7 +4,7 @@ import { AuthProvider } from './contexts/AuthContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
-import ScrollToTop from './components/common/ScrollToTop'
+import FloatingActionButtons from './components/common/FloatingActionButtons'
 import ProtectedRoute from './components/auth/ProtectedRoute'
 
 // Pages
@@ -35,7 +35,7 @@ function App() {
       <AuthProvider>
         <Router>
           <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 transition-colors duration-300">
-            <ScrollToTop />
+            <FloatingActionButtons />
             <Header />
             <main className="flex-1">
               <Routes>

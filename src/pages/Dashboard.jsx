@@ -73,7 +73,7 @@ const Dashboard = () => {
       time: '11:00 AM',
       status: 'completed',
       notes: 'Routine cleaning completed. Good oral health.',
-      cost: '$150.00',
+      cost: 'PKR 42,000.00',
       invoice: 'INV-2023-1215'
     },
     {
@@ -84,7 +84,7 @@ const Dashboard = () => {
       time: '3:00 PM',
       status: 'completed',
       notes: 'Root canal on tooth #14 completed successfully.',
-      cost: '$800.00',
+      cost: 'PKR 224,000.00',
       invoice: 'INV-2023-1120'
     }
   ])

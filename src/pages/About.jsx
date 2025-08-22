@@ -52,7 +52,7 @@ const About = () => {
       experience: '15+ years',
       education: 'DDS, Columbia University',
       image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face',
-      bio: 'Dr. Johnson founded BrightSmile with a vision to provide exceptional dental care in a warm, welcoming environment. She specializes in cosmetic dentistry and is known for her gentle approach.'
+      bio: 'Dr. Johnson founded Krachi Dental Clinic with a vision to provide exceptional dental care in a warm, welcoming environment. She specializes in cosmetic dentistry and is known for her gentle approach.'
     },
     {
       name: 'Dr. Michael Chen',
@@ -94,7 +94,7 @@ const About = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6">
-              About BrightSmile
+              About Krachi
             </h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
               Providing compassionate dental care since 2010. Your smile is our priority, 
@@ -143,7 +143,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-lg text-neutral-700 dark:text-neutral-300">
                 <p>
-                  BrightSmile Dental Clinic was founded in 2010 with a simple mission: to provide 
+                  Krachi Dental Clinic was founded in 2010 with a simple mission: to provide 
                   exceptional dental care in a warm, welcoming environment. Dr. Sarah Johnson started 
                   this practice after recognizing the need for patient-centered dental care in New York.
                 </p>
@@ -189,7 +189,7 @@ const About = () => {
               Our Values
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-              The principles that guide everything we do at BrightSmile Dental Clinic
+              The principles that guide everything we do at Krachi Dental Clinic
             </p>
           </motion.div>
 
@@ -337,7 +337,7 @@ const About = () => {
             className="space-y-8"
           >
             <h2 className="text-4xl font-bold font-heading">
-              Ready to Experience the BrightSmile Difference?
+              Ready to Experience the Krachi Difference?
             </h2>
             <p className="text-xl text-primary-100">
               Schedule your appointment today and discover why thousands of patients trust us with their smiles.
