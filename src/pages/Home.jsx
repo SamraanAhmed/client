@@ -192,13 +192,13 @@ const Home = () => {
                 Call Us Now
               </Button>
               <Button
-                variant="ghost"
+                variant="primary"
                 size="lg"
                 icon={<MessageCircle size={20} />}
                 href="https://wa.me/15551234567"
-                className="text-accent-teal border-accent-teal hover:bg-accent-teal hover:text-white"
+                className="bg-green-500 hover:bg-green-600 text-white border-green-500 font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
-                WhatsApp
+                💬 Chat on WhatsApp
               </Button>
             </div>
           </motion.div>
