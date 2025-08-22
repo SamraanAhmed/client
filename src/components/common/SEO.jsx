@@ -2,9 +2,9 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 const SEO = ({
-  title = 'Karachi Dental Clinic - Expert Dental Care in New York',
-  description = 'Bright Smiles, Lasting Health - Expert dental care in New York. Comfortable, affordable, and trusted dental services. Book your appointment today!',
-  keywords = 'dentist, dental clinic, teeth whitening, orthodontics, dental care, New York, dental implants, root canal, cosmetic dentistry',
+  title = 'Karachi Dental Clinic - Expert Dental Care in Karachi',
+  description = 'Bright Smiles, Lasting Health - Expert dental care in Karachi. Comfortable, affordable, and trusted dental services. Book your appointment today!',
+  keywords = 'dentist, dental clinic, teeth whitening, orthodontics, dental care, Karachi, dental implants, root canal, cosmetic dentistry',
   image = '/og-image.jpg',
   url = 'https://karachidentalclinic.com',
   type = 'website'
@@ -51,16 +51,16 @@ const SEO = ({
           "email": "info@karachidentalclinic.com",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "123 Broadway Street",
-            "addressLocality": "New York",
-            "addressRegion": "NY",
-            "postalCode": "10001",
-            "addressCountry": "US"
+            "streetAddress": "123 Shahrah-e-Faisal",
+            "addressLocality": "Karachi",
+            "addressRegion": "Sindh",
+            "postalCode": "75530",
+            "addressCountry": "PK"
           },
           "geo": {
             "@type": "GeoCoordinates",
-            "latitude": "40.7589",
-            "longitude": "-73.9851"
+            "latitude": "24.8607",
+            "longitude": "67.0011"
           },
           "openingHours": [
             "Mo-Fr 10:00-20:00",
