@@ -28,7 +28,7 @@ const Specialists = () => {
       experience: '15+ years',
       education: ['DDS, Columbia University College of Dental Medicine', 'Advanced Cosmetic Dentistry Certificate'],
       image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face',
-      bio: 'Dr. Johnson founded Krachi Dental Clinic with a vision to provide exceptional dental care in a warm, welcoming environment. She specializes in cosmetic dentistry and is known for her gentle approach that puts even the most anxious patients at ease.',
+      bio: 'Dr. Johnson founded Karachi Dental Clinic with a vision to provide exceptional dental care in a warm, welcoming environment. She specializes in cosmetic dentistry and is known for her gentle approach that puts even the most anxious patients at ease.',
       specialties: [
         'Porcelain Veneers',
         'Teeth Whitening',
@@ -44,7 +44,7 @@ const Specialists = () => {
       languages: ['English', 'Spanish'],
       availability: 'Monday - Friday',
       phone: '+1 (555) 123-4567',
-      email: 'dr.johnson@krachidentalclinic.com'
+      email: 'dr.johnson@karachidentalclinic.com'
     },
     {
       id: 2,
@@ -70,7 +70,7 @@ const Specialists = () => {
       languages: ['English', 'Mandarin', 'Cantonese'],
       availability: 'Tuesday - Saturday',
       phone: '+1 (555) 123-4568',
-      email: 'dr.chen@krachidentalclinic.com'
+      email: 'dr.chen@karachidentalclinic.com'
     },
     {
       id: 3,
@@ -96,7 +96,7 @@ const Specialists = () => {
       languages: ['English', 'Spanish', 'Portuguese'],
       availability: 'Monday - Thursday',
       phone: '+1 (555) 123-4569',
-      email: 'dr.rodriguez@krachidentalclinic.com'
+      email: 'dr.rodriguez@karachidentalclinic.com'
     },
     {
       id: 4,
@@ -122,7 +122,7 @@ const Specialists = () => {
       languages: ['English', 'French'],
       availability: 'Wednesday - Friday',
       phone: '+1 (555) 123-4570',
-      email: 'dr.wilson@krachidentalclinic.com'
+      email: 'dr.wilson@karachidentalclinic.com'
     },
     {
       id: 5,
@@ -148,7 +148,7 @@ const Specialists = () => {
       languages: ['English', 'Korean', 'Spanish'],
       availability: 'Monday - Friday',
       phone: '+1 (555) 123-4571',
-      email: 'dr.park@krachidentalclinic.com'
+      email: 'dr.park@karachidentalclinic.com'
     },
     {
       id: 6,
@@ -174,7 +174,7 @@ const Specialists = () => {
       languages: ['English', 'German'],
       availability: 'Tuesday - Saturday',
       phone: '+1 (555) 123-4572',
-      email: 'dr.thompson@krachidentalclinic.com'
+      email: 'dr.thompson@karachidentalclinic.com'
     }
   ]
 
