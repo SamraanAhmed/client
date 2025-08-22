@@ -280,18 +280,18 @@ const Services = () => {
                       Popular
                     </div>
                   )}
-                  <Card className="h-full p-6 group cursor-pointer">
-                    <Link to={`/services/${service.slug}`}>
+                  <Card className="h-full p-6 group flex flex-col">
+                    <Link to={`/services/${service.slug}`} className="flex-1 cursor-pointer">
                       <div className="mb-6 flex justify-center">
                         <div className="p-4 bg-neutral-50 dark:bg-neutral-800 rounded-2xl group-hover:scale-110 transition-transform duration-300">
                           {service.icon}
                         </div>
                       </div>
-                      
+
                       <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-3 text-center">
                         {service.title}
                       </h3>
-                      
+
                       <p className="text-neutral-600 dark:text-neutral-300 mb-4 text-center">
                         {service.description}
                       </p>
@@ -323,27 +323,29 @@ const Services = () => {
                           )}
                         </ul>
                       </div>
-
-                      <div className="flex items-center justify-between">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="flex-1 mr-3"
-                        >
-                          Learn More
-                        </Button>
-                        <Button
-                          as={Link}
-                          to="/book"
-                          variant="primary"
-                          size="sm"
-                          icon={<ArrowRight size={16} />}
-                          iconPosition="right"
-                        >
-                          Book Now
-                        </Button>
-                      </div>
                     </Link>
+
+                    <div className="flex items-center justify-between mt-auto">
+                      <Button
+                        as={Link}
+                        to={`/services/${service.slug}`}
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 mr-3"
+                      >
+                        Learn More
+                      </Button>
+                      <Button
+                        as={Link}
+                        to="/book"
+                        variant="primary"
+                        size="sm"
+                        icon={<ArrowRight size={16} />}
+                        iconPosition="right"
+                      >
+                        Book Now
+                      </Button>
+                    </div>
                   </Card>
                 </motion.div>
               ))}

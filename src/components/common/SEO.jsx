@@ -68,11 +68,6 @@ const SEO = ({
           ],
           "priceRange": "PKR",
           "image": image,
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "500"
-          },
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Dental Services",

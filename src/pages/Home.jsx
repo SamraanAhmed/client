@@ -161,10 +161,6 @@ const Home = () => {
                 <span>10+ Years Experience</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Star className="w-5 h-5 text-accent-yellow" />
-                <span>4.9★ from 500+ Reviews</span>
-              </div>
-              <div className="flex items-center space-x-2">
                 <Shield className="w-5 h-5 text-accent-teal" />
                 <span>Certified Specialists</span>
               </div>

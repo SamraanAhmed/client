@@ -24,7 +24,6 @@ const Footer = () => {
     { name: 'Services', href: '/services' },
     { name: 'Specialists', href: '/specialists' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Testimonials', href: '/testimonials' },
     { name: 'Blog', href: '/blog' },
   ]
 
