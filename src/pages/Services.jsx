@@ -78,7 +78,7 @@ const Services = () => {
       icon: <Heart className="w-8 h-8 text-red-500" />,
       description: "Permanent solution for missing teeth with titanium implants that look and feel natural.",
       duration: "3-6 months process",
-      price: "Starting at $2,500",
+      price: "Starting at PKR 700,000",
       features: ["Titanium implant post", "Custom crown", "Bone grafting if needed", "3D imaging", "Lifetime warranty"],
       popular: true
     },
@@ -90,7 +90,7 @@ const Services = () => {
       icon: <Shield className="w-8 h-8 text-primary-500" />,
       description: "Pain-free root canal treatment to save infected or damaged teeth and prevent extraction.",
       duration: "60-90 minutes",
-      price: "Starting at $800",
+      price: "Starting at PKR 224,000",
       features: ["Digital imaging", "Local anesthesia", "Gentle technique", "Same-day completion", "Crown placement available"],
       popular: false
     },
@@ -102,7 +102,7 @@ const Services = () => {
       icon: <Clock className="w-8 h-8 text-red-600" />,
       description: "24/7 emergency dental services for urgent problems like severe pain, trauma, or infections.",
       duration: "Immediate care",
-      price: "Starting at $200",
+      price: "Starting at PKR 56,000",
       features: ["24/7 availability", "Same-day appointments", "Pain management", "Trauma treatment", "Follow-up care"],
       popular: false
     },
@@ -114,7 +114,7 @@ const Services = () => {
       icon: <Shield className="w-8 h-8 text-accent-teal" />,
       description: "Restore damaged teeth or replace missing ones with custom-made crowns and bridges.",
       duration: "2-3 visits",
-      price: "Starting at $1,200",
+      price: "Starting at PKR 336,000",
       features: ["Porcelain crowns", "Metal-free options", "Perfect color matching", "Digital impressions", "Same-day crowns available"],
       popular: false
     },
@@ -126,7 +126,7 @@ const Services = () => {
       icon: <Stethoscope className="w-8 h-8 text-primary-500" />,
       description: "Comprehensive periodontal therapy to treat gum disease and restore gum health.",
       duration: "Multiple visits",
-      price: "Starting at $300",
+      price: "Starting at PKR 84,000",
       features: ["Deep cleaning", "Scaling & root planing", "Antibiotic therapy", "Gum surgery if needed", "Maintenance program"],
       popular: false
     },
@@ -138,7 +138,7 @@ const Services = () => {
       icon: <Baby className="w-8 h-8 text-accent-yellow" />,
       description: "Specialized dental care for children in a fun, comfortable environment with gentle techniques.",
       duration: "30-45 minutes",
-      price: "Starting at $120",
+      price: "Starting at PKR 33,600",
       features: ["Child-friendly environment", "Nitrous oxide available", "Preventive treatments", "Sealants", "Education for parents"],
       popular: false
     },
@@ -150,7 +150,7 @@ const Services = () => {
       icon: <Zap className="w-8 h-8 text-red-500" />,
       description: "Comprehensive oral surgery including wisdom teeth removal, extractions, and implant placement.",
       duration: "30-120 minutes",
-      price: "Starting at $400",
+      price: "Starting at PKR 112,000",
       features: ["Wisdom teeth removal", "Tooth extractions", "Bone grafting", "Sedation options", "Post-op care"],
       popular: false
     },
@@ -162,7 +162,7 @@ const Services = () => {
       icon: <Sparkles className="w-8 h-8 text-accent-yellow" />,
       description: "Transform your smile with custom porcelain veneers for a perfect, natural-looking result.",
       duration: "2-3 visits",
-      price: "Starting at $1,500",
+      price: "Starting at PKR 420,000",
       features: ["Ultra-thin porcelain", "Custom design", "Natural appearance", "Stain resistant", "10-year warranty"],
       popular: true
     },
@@ -174,7 +174,7 @@ const Services = () => {
       icon: <Clock className="w-8 h-8 text-primary-500" />,
       description: "Custom oral appliances to treat sleep apnea and improve your quality of sleep.",
       duration: "2-3 visits",
-      price: "Starting at $2,000",
+      price: "Starting at PKR 560,000",
       features: ["Sleep study analysis", "Custom oral appliance", "Comfortable design", "Regular adjustments", "Insurance coverage help"],
       popular: false
     }
