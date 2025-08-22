@@ -151,7 +151,7 @@ const Home = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto leading-relaxed">
-              Expert dental care in New York – Comfortable, affordable, and trusted by thousands of patients.
+              Expert dental care in Karachi – Comfortable, affordable, and trusted by thousands of patients.
             </p>
 
             {/* Trust Signals */}
