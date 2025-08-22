@@ -42,7 +42,7 @@ const Services = () => {
       icon: <CheckCircle className="w-8 h-8 text-primary-500" />,
       description: "Comprehensive dental examination, professional cleaning, and preventive care to maintain optimal oral health.",
       duration: "45-60 minutes",
-      price: "Starting at $150",
+      price: "Starting at PKR 42,000",
       features: ["Digital X-rays", "Thorough examination", "Professional cleaning", "Fluoride treatment", "Oral health consultation"],
       popular: true
     },
