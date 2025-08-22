@@ -140,12 +140,12 @@ const Pricing = () => {
       { service: 'Emergency Visit', price: 'PKR 21,000 - PKR 42,000', duration: '30 min', description: 'Urgent dental care for pain relief and stabilization' }
     ],
     cosmetic: [
-      { service: 'Professional Teeth Whitening', price: '$400 - $600', duration: '90 min', description: 'In-office whitening for dramatic results' },
-      { service: 'Porcelain Veneers (Per Tooth)', price: '$800 - $1,200', duration: '120 min', description: 'Custom veneers for perfect smile transformation' },
-      { service: 'Smile Makeover Consultation', price: '$100', duration: '60 min', description: 'Comprehensive cosmetic treatment planning' },
-      { service: 'Composite Bonding (Per Tooth)', price: '$200 - $400', duration: '45 min', description: 'Tooth-colored resin to improve appearance' },
-      { service: 'Gum Contouring', price: '$300 - $600', duration: '60 min', description: 'Reshaping gums for improved smile aesthetics' },
-      { service: 'Full Mouth Reconstruction', price: '$15,000 - $30,000', duration: 'Multiple visits', description: 'Complete smile and function restoration' }
+      { service: 'Professional Teeth Whitening', price: 'PKR 112,000 - PKR 168,000', duration: '90 min', description: 'In-office whitening for dramatic results' },
+      { service: 'Porcelain Veneers (Per Tooth)', price: 'PKR 224,000 - PKR 336,000', duration: '120 min', description: 'Custom veneers for perfect smile transformation' },
+      { service: 'Smile Makeover Consultation', price: 'PKR 28,000', duration: '60 min', description: 'Comprehensive cosmetic treatment planning' },
+      { service: 'Composite Bonding (Per Tooth)', price: 'PKR 56,000 - PKR 112,000', duration: '45 min', description: 'Tooth-colored resin to improve appearance' },
+      { service: 'Gum Contouring', price: 'PKR 84,000 - PKR 168,000', duration: '60 min', description: 'Reshaping gums for improved smile aesthetics' },
+      { service: 'Full Mouth Reconstruction', price: 'PKR 4,200,000 - PKR 8,400,000', duration: 'Multiple visits', description: 'Complete smile and function restoration' }
     ],
     orthodontics: [
       { service: 'Invisalign Treatment', price: '$3,500 - $6,000', duration: '12-18 months', description: 'Clear aligner therapy for straighter teeth' },
