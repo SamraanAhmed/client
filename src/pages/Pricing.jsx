@@ -28,7 +28,7 @@ const Pricing = () => {
       id: 'essential',
       name: 'Essential Care',
       subtitle: 'Perfect for routine maintenance',
-      price: '$99',
+      price: 'PKR 27,720',
       period: 'per visit',
       popular: false,
       description: 'Basic dental care to maintain your oral health',
@@ -52,7 +52,7 @@ const Pricing = () => {
       id: 'premium',
       name: 'Premium Care',
       subtitle: 'Comprehensive dental wellness',
-      price: '$199',
+      price: 'PKR 55,720',
       period: 'per visit',
       popular: true,
       description: 'Advanced preventive care with detailed analysis',
@@ -78,7 +78,7 @@ const Pricing = () => {
       id: 'family',
       name: 'Family Plan',
       subtitle: 'Care for the whole family',
-      price: '$299',
+      price: 'PKR 83,720',
       period: 'per family/visit',
       popular: false,
       description: 'Comprehensive care for up to 4 family members',
@@ -131,13 +131,13 @@ const Pricing = () => {
 
   const servicePricing = {
     general: [
-      { service: 'Routine Cleaning & Exam', price: '$99 - $149', duration: '60 min', description: 'Complete oral health assessment with professional cleaning' },
-      { service: 'Deep Cleaning (Per Quadrant)', price: '$150 - $200', duration: '45 min', description: 'Scaling and root planing for gum disease treatment' },
-      { service: 'Fillings (Composite)', price: '$120 - $250', duration: '30-60 min', description: 'Tooth-colored fillings for cavity treatment' },
-      { service: 'Root Canal Therapy', price: '$800 - $1,200', duration: '60-90 min', description: 'Endodontic treatment to save infected teeth' },
-      { service: 'Crown (Porcelain)', price: '$1,000 - $1,500', duration: '90 min', description: 'Custom-made crown for damaged teeth' },
-      { service: 'Tooth Extraction (Simple)', price: '$150 - $300', duration: '30 min', description: 'Safe removal of damaged or problematic teeth' },
-      { service: 'Emergency Visit', price: '$75 - $150', duration: '30 min', description: 'Urgent dental care for pain relief and stabilization' }
+      { service: 'Routine Cleaning & Exam', price: 'PKR 27,720 - PKR 41,720', duration: '60 min', description: 'Complete oral health assessment with professional cleaning' },
+      { service: 'Deep Cleaning (Per Quadrant)', price: 'PKR 42,000 - PKR 56,000', duration: '45 min', description: 'Scaling and root planing for gum disease treatment' },
+      { service: 'Fillings (Composite)', price: 'PKR 33,600 - PKR 70,000', duration: '30-60 min', description: 'Tooth-colored fillings for cavity treatment' },
+      { service: 'Root Canal Therapy', price: 'PKR 224,000 - PKR 336,000', duration: '60-90 min', description: 'Endodontic treatment to save infected teeth' },
+      { service: 'Crown (Porcelain)', price: 'PKR 280,000 - PKR 420,000', duration: '90 min', description: 'Custom-made crown for damaged teeth' },
+      { service: 'Tooth Extraction (Simple)', price: 'PKR 42,000 - PKR 84,000', duration: '30 min', description: 'Safe removal of damaged or problematic teeth' },
+      { service: 'Emergency Visit', price: 'PKR 21,000 - PKR 42,000', duration: '30 min', description: 'Urgent dental care for pain relief and stabilization' }
     ],
     cosmetic: [
       { service: 'Professional Teeth Whitening', price: '$400 - $600', duration: '90 min', description: 'In-office whitening for dramatic results' },
