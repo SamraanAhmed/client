@@ -148,12 +148,12 @@ const Pricing = () => {
       { service: 'Full Mouth Reconstruction', price: 'PKR 4,200,000 - PKR 8,400,000', duration: 'Multiple visits', description: 'Complete smile and function restoration' }
     ],
     orthodontics: [
-      { service: 'Invisalign Treatment', price: '$3,500 - $6,000', duration: '12-18 months', description: 'Clear aligner therapy for straighter teeth' },
-      { service: 'Traditional Metal Braces', price: '$3,000 - $5,000', duration: '18-24 months', description: 'Proven orthodontic treatment for all ages' },
-      { service: 'Ceramic Braces', price: '$4,000 - $6,000', duration: '18-24 months', description: 'Tooth-colored braces for discreet treatment' },
-      { service: 'Orthodontic Consultation', price: '$150', duration: '45 min', description: 'Comprehensive evaluation and treatment planning' },
-      { service: 'Retainers (Set)', price: '$300 - $500', duration: '30 min', description: 'Custom retainers to maintain treatment results' },
-      { service: 'Early Intervention (Phase 1)', price: '$2,000 - $3,500', duration: '6-12 months', description: 'Early orthodontic treatment for children' }
+      { service: 'Invisalign Treatment', price: 'PKR 980,000 - PKR 1,680,000', duration: '12-18 months', description: 'Clear aligner therapy for straighter teeth' },
+      { service: 'Traditional Metal Braces', price: 'PKR 840,000 - PKR 1,400,000', duration: '18-24 months', description: 'Proven orthodontic treatment for all ages' },
+      { service: 'Ceramic Braces', price: 'PKR 1,120,000 - PKR 1,680,000', duration: '18-24 months', description: 'Tooth-colored braces for discreet treatment' },
+      { service: 'Orthodontic Consultation', price: 'PKR 42,000', duration: '45 min', description: 'Comprehensive evaluation and treatment planning' },
+      { service: 'Retainers (Set)', price: 'PKR 84,000 - PKR 140,000', duration: '30 min', description: 'Custom retainers to maintain treatment results' },
+      { service: 'Early Intervention (Phase 1)', price: 'PKR 560,000 - PKR 980,000', duration: '6-12 months', description: 'Early orthodontic treatment for children' }
     ],
     surgery: [
       { service: 'Single Dental Implant', price: '$2,500 - $4,000', duration: '90 min', description: 'Complete implant with crown placement' },
