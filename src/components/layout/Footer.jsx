@@ -61,8 +61,8 @@ const Footer = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin size={16} className="text-primary-400 mt-1 flex-shrink-0" />
                   <span className="text-sm text-neutral-300">
-                    123 Broadway Street<br />
-                    New York, NY 10001
+                    123 Shahrah-e-Faisal<br />
+                    Karachi, Sindh 75530
                   </span>
                 </div>
                 
