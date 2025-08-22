@@ -2,11 +2,11 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 const SEO = ({
-  title = 'BrightSmile Dental Clinic - Expert Dental Care in New York',
+  title = 'Krachi Dental Clinic - Expert Dental Care in New York',
   description = 'Bright Smiles, Lasting Health - Expert dental care in New York. Comfortable, affordable, and trusted dental services. Book your appointment today!',
   keywords = 'dentist, dental clinic, teeth whitening, orthodontics, dental care, New York, dental implants, root canal, cosmetic dentistry',
   image = '/og-image.jpg',
-  url = 'https://brightsmile-dental.com',
+  url = 'https://krachidentalclinic.com',
   type = 'website'
 }) => {
   return (
@@ -15,7 +15,7 @@ const SEO = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="BrightSmile Dental Clinic" />
+      <meta name="author" content="Krachi Dental Clinic" />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
@@ -23,7 +23,7 @@ const SEO = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="BrightSmile Dental Clinic" />
+      <meta property="og:site_name" content="Krachi Dental Clinic" />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -44,11 +44,11 @@ const SEO = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Dentist",
-          "name": "BrightSmile Dental Clinic",
+          "name": "Krachi Dental Clinic",
           "description": description,
           "url": url,
           "telephone": "+1-555-123-4567",
-          "email": "info@brightsmile.com",
+          "email": "info@krachidentalclinic.com",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "123 Broadway Street",
