@@ -79,10 +79,10 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <Mail size={16} className="text-primary-400 flex-shrink-0" />
                   <a 
-                    href="mailto:info@krachidentalclinic.com" 
+                    href="mailto:info@karachidentalclinic.com" 
                     className="text-sm text-neutral-300 hover:text-white transition-colors"
                   >
-                    info@krachidentalclinic.com
+                    info@karachidentalclinic.com
                   </a>
                 </div>
                 
@@ -195,7 +195,7 @@ const Footer = () => {
         <div className="border-t border-neutral-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-neutral-400">
-              © {currentYear} Krachi Dental Clinic. All rights reserved.
+              © {currentYear} Karachi Dental Clinic. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6">
