@@ -64,54 +64,7 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-4">
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
 
-            {/* Emergency Call */}
-            <Button
-              variant="ghost"
-              size="sm"
-              icon={<Phone size={16} />}
-              href="tel:+1-555-123-4567"
-              className="text-accent-teal"
-            >
-              Emergency
-            </Button>
-
-            {user ? (
-              <div className="flex items-center space-x-3">
-                <Link
-                  to="/dashboard"
-                  className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600"
-                >
-                  Dashboard
-                </Link>
-                <button
-                  onClick={handleLogout}
-                  className="text-sm font-medium text-neutral-500 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-200"
-                >
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <div className="flex items-center space-x-3">
-                <Link
-                  to="/login"
-                  className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-600"
-                >
-                  Login
-                </Link>
-                <Button as={Link} to="/signup" variant="secondary" size="sm">
-                  Sign Up
-                </Button>
-              </div>
-            )}
 
             {/* Book Appointment CTA */}
             <Button
@@ -162,67 +115,7 @@ const Header = () => {
               ))}
               
               <div className="pt-4 border-t border-neutral-200 dark:border-neutral-700 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-neutral-600 dark:text-neutral-400">Theme</span>
-                  <button
-                    onClick={toggleTheme}
-                    className="p-2 rounded-lg text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                  >
-                    {isDark ? <Sun size={20} /> : <Moon size={20} />}
-                  </button>
-                </div>
 
-                <Button
-                  variant="outline"
-                  fullWidth
-                  icon={<Phone size={16} />}
-                  href="tel:+1-555-123-4567"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Emergency Call
-                </Button>
-
-                {user ? (
-                  <div className="space-y-2">
-                    <Button
-                      variant="ghost"
-                      fullWidth
-                      as={Link}
-                      to="/dashboard"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Dashboard
-                    </Button>
-                    <Button
-                      variant="ghost"
-                      fullWidth
-                      onClick={handleLogout}
-                    >
-                      Logout
-                    </Button>
-                  </div>
-                ) : (
-                  <div className="space-y-2">
-                    <Button
-                      variant="ghost"
-                      fullWidth
-                      as={Link}
-                      to="/login"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Login
-                    </Button>
-                    <Button
-                      variant="secondary"
-                      fullWidth
-                      as={Link}
-                      to="/signup"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Sign Up
-                    </Button>
-                  </div>
-                )}
 
                 <Button
                   variant="primary"

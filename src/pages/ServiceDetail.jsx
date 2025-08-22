@@ -28,8 +28,8 @@ const ServiceDetail = () => {
       subtitle: "Comprehensive Dental Examination",
       hero: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=600&fit=crop",
       price: {
-        starting: "$150",
-        range: "$150 - $250",
+        starting: "PKR 42,000",
+        range: "PKR 42,000 - PKR 70,000",
         insurance: "Most insurance accepted"
       },
       duration: "45-60 minutes",
@@ -135,8 +135,8 @@ const ServiceDetail = () => {
       subtitle: "Brighter Smile in Just One Visit",
       hero: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&h=600&fit=crop",
       price: {
-        starting: "$400",
-        range: "$400 - $600",
+        starting: "PKR 112,000",
+        range: "PKR 112,000 - PKR 168,000",
         insurance: "Cosmetic procedure - not typically covered"
       },
       duration: "60-90 minutes",
@@ -566,21 +566,21 @@ const ServiceDetail = () => {
                   className="block p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
                 >
                   <div className="font-medium text-neutral-900 dark:text-white">General Checkup</div>
-                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at $150</div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at PKR 42,000</div>
                 </Link>
                 <Link 
                   to="/services/teeth-whitening" 
                   className="block p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
                 >
                   <div className="font-medium text-neutral-900 dark:text-white">Teeth Whitening</div>
-                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at $400</div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at PKR 112,000</div>
                 </Link>
                 <Link 
                   to="/services/orthodontics" 
                   className="block p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
                 >
                   <div className="font-medium text-neutral-900 dark:text-white">Orthodontics</div>
-                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at $3,500</div>
+                  <div className="text-sm text-neutral-600 dark:text-neutral-300">Starting at PKR 980,000</div>
                 </Link>
               </div>
               <Link 
