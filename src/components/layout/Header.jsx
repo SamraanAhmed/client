@@ -64,14 +64,6 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center space-x-4">
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
 
 
             {/* Book Appointment CTA */}
@@ -123,15 +115,6 @@ const Header = () => {
               ))}
               
               <div className="pt-4 border-t border-neutral-200 dark:border-neutral-700 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-neutral-600 dark:text-neutral-400">Theme</span>
-                  <button
-                    onClick={toggleTheme}
-                    className="p-2 rounded-lg text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800"
-                  >
-                    {isDark ? <Sun size={20} /> : <Moon size={20} />}
-                  </button>
-                </div>
 
 
                 <Button

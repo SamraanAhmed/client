@@ -11,35 +11,23 @@ export const useTheme = () => {
 }
 
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('theme')
-      if (saved) {
-        return saved === 'dark'
-      }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
-    }
-    return false
-  })
+  const [isDark, setIsDark] = useState(false) // Always light theme
 
   useEffect(() => {
     const root = window.document.documentElement
-    if (isDark) {
-      root.classList.add('dark')
-    } else {
-      root.classList.remove('dark')
-    }
-    localStorage.setItem('theme', isDark ? 'dark' : 'light')
-  }, [isDark])
+    // Always remove dark class to force light theme
+    root.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
+  }, [])
 
   const toggleTheme = () => {
-    setIsDark(prev => !prev)
+    // Do nothing - theme toggle disabled
   }
 
   const value = {
-    isDark,
+    isDark: false, // Always light
     toggleTheme,
-    theme: isDark ? 'dark' : 'light'
+    theme: 'light' // Always light
   }
 
   return (
