@@ -156,12 +156,12 @@ const Pricing = () => {
       { service: 'Early Intervention (Phase 1)', price: 'PKR 560,000 - PKR 980,000', duration: '6-12 months', description: 'Early orthodontic treatment for children' }
     ],
     surgery: [
-      { service: 'Single Dental Implant', price: '$2,500 - $4,000', duration: '90 min', description: 'Complete implant with crown placement' },
-      { service: 'Wisdom Tooth Extraction', price: '$200 - $600', duration: '45-60 min', description: 'Surgical removal of impacted wisdom teeth' },
-      { service: 'Bone Grafting', price: '$500 - $1,200', duration: '60 min', description: 'Bone augmentation for implant preparation' },
-      { service: 'Sinus Lift', price: '$1,500 - $2,500', duration: '90 min', description: 'Sinus augmentation for upper jaw implants' },
-      { service: 'Full Mouth Implants', price: '$20,000 - $40,000', duration: 'Multiple visits', description: 'Complete mouth restoration with implants' },
-      { service: 'Oral Biopsy', price: '$300 - $500', duration: '30 min', description: 'Tissue sampling for diagnosis' }
+      { service: 'Single Dental Implant', price: 'PKR 700,000 - PKR 1,120,000', duration: '90 min', description: 'Complete implant with crown placement' },
+      { service: 'Wisdom Tooth Extraction', price: 'PKR 56,000 - PKR 168,000', duration: '45-60 min', description: 'Surgical removal of impacted wisdom teeth' },
+      { service: 'Bone Grafting', price: 'PKR 140,000 - PKR 336,000', duration: '60 min', description: 'Bone augmentation for implant preparation' },
+      { service: 'Sinus Lift', price: 'PKR 420,000 - PKR 700,000', duration: '90 min', description: 'Sinus augmentation for upper jaw implants' },
+      { service: 'Full Mouth Implants', price: 'PKR 5,600,000 - PKR 11,200,000', duration: 'Multiple visits', description: 'Complete mouth restoration with implants' },
+      { service: 'Oral Biopsy', price: 'PKR 84,000 - PKR 140,000', duration: '30 min', description: 'Tissue sampling for diagnosis' }
     ],
     pediatric: [
       { service: 'Child Cleaning & Exam', price: '$75 - $120', duration: '45 min', description: 'Gentle care designed for children' },
