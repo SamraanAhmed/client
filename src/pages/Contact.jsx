@@ -66,11 +66,11 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6 text-primary-500" />,
       title: 'Email Us',
       details: [
-        'info@brightsmile.com',
-        'appointments@brightsmile.com',
-        'billing@brightsmile.com'
+        'info@krachidentalclinic.com',
+        'appointments@krachidentalclinic.com',
+        'billing@krachidentalclinic.com'
       ],
-      action: { text: 'Send Email', href: 'mailto:info@brightsmile.com' }
+      action: { text: 'Send Email', href: 'mailto:info@krachidentalclinic.com' }
     },
     {
       icon: <Clock className="w-6 h-6 text-primary-500" />,
@@ -210,7 +210,7 @@ const Contact = () => {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="BrightSmile Dental Clinic Location"
+                    title="Krachi Dental Clinic Location"
                   />
                 </div>
               </Card>
