@@ -117,18 +117,6 @@ const ServiceDetail = () => {
           answer: "The cleaning effects last until plaque and tartar begin to rebuild, typically 3-6 months depending on your oral hygiene and diet."
         }
       ],
-      testimonials: [
-        {
-          text: "The most thorough cleaning I've ever had. The hygienist was gentle and the dentist explained everything clearly.",
-          author: "Sarah M.",
-          rating: 5
-        },
-        {
-          text: "Great experience! They caught a small cavity early, which saved me from a bigger problem later.",
-          author: "Mike R.", 
-          rating: 5
-        }
-      ]
     },
     'teeth-whitening': {
       title: "Professional Teeth Whitening",
@@ -225,18 +213,6 @@ const ServiceDetail = () => {
           answer: "Avoid coffee, tea, wine, and other staining foods/drinks for 48 hours to maximize results."
         }
       ],
-      testimonials: [
-        {
-          text: "Amazing results! My teeth are 6 shades whiter and I couldn't be happier. The process was comfortable and quick.",
-          author: "Jennifer L.",
-          rating: 5
-        },
-        {
-          text: "I was nervous about sensitivity but had none at all. The results exceeded my expectations!",
-          author: "David K.",
-          rating: 5
-        }
-      ]
     }
     // Add more services as needed
   }
@@ -252,7 +228,6 @@ const ServiceDetail = () => {
     risks: [],
     aftercare: [],
     faqs: [],
-    testimonials: [],
     price: { starting: 'Contact for pricing' },
     duration: 'Varies'
   }
@@ -467,35 +442,6 @@ const ServiceDetail = () => {
               </motion.section>
             )}
 
-            {/* Testimonials */}
-            {service.testimonials.length > 0 && (
-              <motion.section
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <h2 className="text-3xl font-bold font-heading text-neutral-900 dark:text-white mb-6">
-                  Patient Reviews
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {service.testimonials.map((testimonial, index) => (
-                    <Card key={index} className="p-6">
-                      <div className="flex mb-3">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 text-accent-yellow fill-current" />
-                        ))}
-                      </div>
-                      <blockquote className="text-neutral-700 dark:text-neutral-300 mb-4 italic">
-                        "{testimonial.text}"
-                      </blockquote>
-                      <div className="font-medium text-neutral-900 dark:text-white">
-                        — {testimonial.author}
-                      </div>
-                    </Card>
-                  ))}
-                </div>
-              </motion.section>
-            )}
           </div>
 
           {/* Sidebar */}
