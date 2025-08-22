@@ -66,7 +66,7 @@ const Services = () => {
       icon: <Smile className="w-8 h-8 text-accent-teal" />,
       description: "Straighten your teeth with traditional braces, clear aligners, or Invisalign for a perfect smile.",
       duration: "12-24 months treatment",
-      price: "Starting at $3,500",
+      price: "Starting at PKR 980,000",
       features: ["Traditional metal braces", "Clear ceramic braces", "Invisalign aligners", "Regular adjustments", "Retainer included"],
       popular: false
     },
