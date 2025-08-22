@@ -164,12 +164,12 @@ const Pricing = () => {
       { service: 'Oral Biopsy', price: 'PKR 84,000 - PKR 140,000', duration: '30 min', description: 'Tissue sampling for diagnosis' }
     ],
     pediatric: [
-      { service: 'Child Cleaning & Exam', price: '$75 - $120', duration: '45 min', description: 'Gentle care designed for children' },
-      { service: 'Fluoride Treatment', price: '$25 - $50', duration: '15 min', description: 'Cavity prevention treatment' },
-      { service: 'Dental Sealants (Per Tooth)', price: '$30 - $50', duration: '15 min', description: 'Protective coating for molars' },
-      { service: 'Space Maintainer', price: '$200 - $400', duration: '30 min', description: 'Device to preserve space for permanent teeth' },
-      { service: 'Pulpotomy (Baby Tooth)', price: '$150 - $250', duration: '30 min', description: 'Root canal treatment for primary teeth' },
-      { service: 'Stainless Steel Crown', price: '$200 - $300', duration: '30 min', description: 'Protective crown for damaged baby teeth' }
+      { service: 'Child Cleaning & Exam', price: 'PKR 21,000 - PKR 33,600', duration: '45 min', description: 'Gentle care designed for children' },
+      { service: 'Fluoride Treatment', price: 'PKR 7,000 - PKR 14,000', duration: '15 min', description: 'Cavity prevention treatment' },
+      { service: 'Dental Sealants (Per Tooth)', price: 'PKR 8,400 - PKR 14,000', duration: '15 min', description: 'Protective coating for molars' },
+      { service: 'Space Maintainer', price: 'PKR 56,000 - PKR 112,000', duration: '30 min', description: 'Device to preserve space for permanent teeth' },
+      { service: 'Pulpotomy (Baby Tooth)', price: 'PKR 42,000 - PKR 70,000', duration: '30 min', description: 'Root canal treatment for primary teeth' },
+      { service: 'Stainless Steel Crown', price: 'PKR 56,000 - PKR 84,000', duration: '30 min', description: 'Protective crown for damaged baby teeth' }
     ]
   }
 
