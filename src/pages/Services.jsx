@@ -54,7 +54,7 @@ const Services = () => {
       icon: <Sparkles className="w-8 h-8 text-accent-yellow" />,
       description: "Professional teeth whitening to achieve a brighter, more confident smile in just one visit.",
       duration: "60-90 minutes",
-      price: "Starting at $400",
+      price: "Starting at PKR 112,000",
       features: ["Professional-grade whitening gel", "Custom-fitted trays", "Up to 8 shades lighter", "Long-lasting results", "Touch-up kit included"],
       popular: true
     },
