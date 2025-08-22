@@ -66,7 +66,7 @@ const SEO = ({
             "Mo-Fr 10:00-20:00",
             "Sa 10:00-17:00"
           ],
-          "priceRange": "$$",
+          "priceRange": "PKR",
           "image": image,
           "aggregateRating": {
             "@type": "AggregateRating",
