@@ -54,9 +54,9 @@ const Contact = () => {
       title: 'Visit Our Clinic',
       subtitle: 'Modern Facility in Prime Location',
       details: [
-        '123 Broadway Street',
-        'New York, NY 10001',
-        'Near Central Park'
+        '123 Shahrah-e-Faisal',
+        'Karachi, Sindh 75530',
+        'Near Clifton Beach'
       ],
       color: 'bg-blue-50 text-blue-600',
       action: { text: 'Get Directions', href: 'https://maps.google.com', icon: <Navigation className="w-4 h-4" /> }
@@ -78,12 +78,12 @@ const Contact = () => {
       title: 'Email Us',
       subtitle: 'Quick Response Guaranteed',
       details: [
-        'info@krachidentalclinic.com',
-        'appointments@krachidentalclinic.com',
-        'billing@krachidentalclinic.com'
+        'info@karachidentalclinic.com',
+        'appointments@karachidentalclinic.com',
+        'billing@karachidentalclinic.com'
       ],
       color: 'bg-purple-50 text-purple-600',
-      action: { text: 'Send Email', href: 'mailto:info@krachidentalclinic.com', icon: <Mail className="w-4 h-4" /> }
+      action: { text: 'Send Email', href: 'mailto:info@karachidentalclinic.com', icon: <Mail className="w-4 h-4" /> }
     },
     {
       icon: <Clock className="w-6 h-6" />,
@@ -429,7 +429,7 @@ const Contact = () => {
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Krachi Dental Clinic Location"
+                      title="Karachi Dental Clinic Location"
                     />
                   </div>
                 </Card>

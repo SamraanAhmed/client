@@ -151,7 +151,7 @@ const Home = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto leading-relaxed">
-              Expert dental care in New York – Comfortable, affordable, and trusted by thousands of patients.
+              Expert dental care in Karachi – Comfortable, affordable, and trusted by thousands of patients.
             </p>
 
             {/* Trust Signals */}
@@ -286,7 +286,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold font-heading text-neutral-900 dark:text-white mb-6">
-              Why Choose Krachi?
+              Why Choose Karachi?
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
               We're committed to providing exceptional dental care in a comfortable, modern environment.
