@@ -22,7 +22,7 @@ const Logo = ({ className = "h-8 w-auto", variant = "default" }) => {
       viewBox="0 0 200 60" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
-      aria-label="Krachi Dental Clinic Logo"
+      aria-label="Karachi Dental Clinic Logo"
     >
       {/* Tooth Icon */}
       <g>
@@ -60,7 +60,7 @@ const Logo = ({ className = "h-8 w-auto", variant = "default" }) => {
         fontSize="18"
         fill={currentColors.primary}
       >
-        Krachi
+        Karachi
       </text>
       <text
         x="55"
