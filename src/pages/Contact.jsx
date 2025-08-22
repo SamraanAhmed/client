@@ -54,9 +54,9 @@ const Contact = () => {
       title: 'Visit Our Clinic',
       subtitle: 'Modern Facility in Prime Location',
       details: [
-        '123 Broadway Street',
-        'New York, NY 10001',
-        'Near Central Park'
+        '123 Shahrah-e-Faisal',
+        'Karachi, Sindh 75530',
+        'Near Clifton Beach'
       ],
       color: 'bg-blue-50 text-blue-600',
       action: { text: 'Get Directions', href: 'https://maps.google.com', icon: <Navigation className="w-4 h-4" /> }
