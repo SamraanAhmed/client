@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
             name: 'John Doe',
             phone: '+1-555-123-4567',
             dateOfBirth: '1990-01-01',
-            address: '123 Main St, New York, NY 10001'
+            address: '123 Jinnah Road, Karachi, Sindh 75530'
           }
           setUser(mockUser)
           localStorage.setItem('user', JSON.stringify(mockUser))
