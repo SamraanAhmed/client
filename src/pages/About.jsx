@@ -1,14 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { 
-  Award, 
-  Heart, 
-  Shield, 
-  Users, 
+import {
+  Award,
+  Heart,
+  Shield,
+  Users,
   Clock,
   MapPin,
   Star,
-  CheckCircle
+  CheckCircle,
+  Calendar
 } from 'lucide-react'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
