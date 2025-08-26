@@ -276,8 +276,8 @@ const Services = () => {
                   <Card className="h-full p-4 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div className="text-center">
                       {/* Service Icon */}
-                      <div className="mb-6 flex justify-center">
-                        <div className="p-4 bg-neutral-50 dark:bg-neutral-800 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                      <div className="mb-4 flex justify-center">
+                        <div className="p-3 bg-neutral-50 dark:bg-neutral-800 rounded-2xl group-hover:scale-110 transition-transform duration-300">
                           {service.icon}
                         </div>
                       </div>
