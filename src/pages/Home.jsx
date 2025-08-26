@@ -170,7 +170,7 @@ const Home = () => {
                 variant="primary"
                 size="lg"
                 icon={<i className="fab fa-whatsapp text-xl"></i>}
-                href="https://wa.me/923338353771"
+                href="https://wa.me/03338353771"
                 className="bg-green-500 hover:bg-green-600 text-white border-green-500 font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
                 Chat on WhatsApp
