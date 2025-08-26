@@ -288,7 +288,7 @@ const Services = () => {
                       </h3>
                       
                       {/* Service Description */}
-                      <p className="text-neutral-600 dark:text-neutral-300 mb-6 text-sm leading-relaxed">
+                      <p className="text-neutral-600 dark:text-neutral-300 mb-4 text-sm leading-relaxed">
                         {service.description}
                       </p>
 
