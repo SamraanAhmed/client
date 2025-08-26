@@ -73,11 +73,6 @@ const Home = () => {
       icon: <Users className="w-6 h-6 text-accent-yellow" />,
       title: "Experienced Specialists",
       description: "Board-certified dentists with years of specialized experience."
-    },
-    {
-      icon: <Star className="w-6 h-6 text-primary-500" />,
-      title: "Transparent Pricing",
-      description: "Clear, upfront pricing with flexible payment options."
     }
   ]
 
