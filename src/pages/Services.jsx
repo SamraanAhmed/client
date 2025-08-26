@@ -320,8 +320,8 @@ const Services = () => {
 
                       {/* Special Notes */}
                       {service.note && (
-                        <div className="mb-6 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
-                          <p className="text-sm text-amber-800 dark:text-amber-200">
+                        <div className="mb-4 p-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+                          <p className="text-xs text-amber-800 dark:text-amber-200">
                             <strong>Note:</strong> {service.note}
                           </p>
                         </div>
