@@ -73,11 +73,6 @@ const Home = () => {
       icon: <Users className="w-6 h-6 text-accent-yellow" />,
       title: "Experienced Specialists",
       description: "Board-certified dentists with years of specialized experience."
-    },
-    {
-      icon: <Star className="w-6 h-6 text-primary-500" />,
-      title: "Transparent Pricing",
-      description: "Clear, upfront pricing with flexible payment options."
     }
   ]
 
@@ -158,11 +153,11 @@ const Home = () => {
             <div className="flex flex-wrap justify-center items-center gap-8 text-sm">
               <div className="flex items-center space-x-2">
                 <Award className="w-5 h-5 text-accent-yellow" />
-                <span>10+ Years Experience</span>
+                <span>5+ Years Experience</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Star className="w-5 h-5 text-accent-yellow" />
-                <span>4.9★ from 500+ Reviews</span>
+                <span>5-Star Rating</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Shield className="w-5 h-5 text-accent-teal" />
@@ -195,7 +190,7 @@ const Home = () => {
                 variant="primary"
                 size="lg"
                 icon={<i className="fab fa-whatsapp text-xl"></i>}
-                href="https://wa.me/15551234567"
+                href="https://wa.me/923338353771"
                 className="bg-green-500 hover:bg-green-600 text-white border-green-500 font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
                 Chat on WhatsApp

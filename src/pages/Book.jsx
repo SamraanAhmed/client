@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Calendar, 
-  Clock, 
-  User, 
-  Phone, 
-  Mail, 
+import {
+  Calendar,
+  User,
+  Phone,
+  Mail,
   MessageSquare,
   CheckCircle,
   ChevronLeft,
   ChevronRight,
   Star,
-  MapPin,
   CreditCard,
   Shield
 } from 'lucide-react'
@@ -27,8 +25,6 @@ const Book = () => {
   const [formData, setFormData] = useState({
     service: '',
     specialist: '',
-    date: '',
-    time: '',
     firstName: '',
     lastName: '',
     email: '',
@@ -46,7 +42,7 @@ const Book = () => {
   const { user } = useAuth()
   const navigate = useNavigate()
 
-  const totalSteps = 5
+  const totalSteps = 4
 
   // Pre-fill user data if logged in
   useEffect(() => {
@@ -62,13 +58,13 @@ const Book = () => {
   }, [user])
 
   const services = [
-    { id: 'checkup', name: 'General Checkup & Cleaning', duration: '60 min', price: 'PKR 42,000' },
-    { id: 'whitening', name: 'Teeth Whitening', duration: '90 min', price: 'PKR 112,000' },
-    { id: 'orthodontics', name: 'Orthodontic Consultation', duration: '45 min', price: 'PKR 56,000' },
-    { id: 'implants', name: 'Dental Implant Consultation', duration: '60 min', price: 'PKR 70,000' },
-    { id: 'root-canal', name: 'Root Canal Treatment', duration: '90 min', price: 'PKR 224,000' },
-    { id: 'emergency', name: 'Emergency Care', duration: '30 min', price: 'PKR 56,000' },
-    { id: 'consultation', name: 'General Consultation', duration: '30 min', price: 'Free' }
+    { id: 'checkup', name: 'General Checkup & Cleaning', duration: '60 min' },
+    { id: 'whitening', name: 'Teeth Whitening', duration: '90 min' },
+    { id: 'orthodontics', name: 'Orthodontic Consultation', duration: '45 min' },
+    { id: 'implants', name: 'Dental Implant Consultation', duration: '60 min' },
+    { id: 'root-canal', name: 'Root Canal Treatment', duration: '90 min' },
+    { id: 'emergency', name: 'Emergency Care', duration: '30 min' },
+    { id: 'consultation', name: 'General Consultation', duration: '30 min' }
   ]
 
   const specialists = [
@@ -104,42 +100,6 @@ const Book = () => {
     }
   ]
 
-  // Generate available dates (next 14 days, excluding Sundays)
-  const generateAvailableDates = () => {
-    const dates = []
-    const today = new Date()
-    
-    for (let i = 1; i <= 21; i++) {
-      const date = new Date(today)
-      date.setDate(today.getDate() + i)
-      
-      // Skip Sundays (0 = Sunday)
-      if (date.getDay() !== 0) {
-        dates.push(date)
-      }
-      
-      if (dates.length >= 14) break
-    }
-    
-    return dates
-  }
-
-  // Generate available time slots
-  const generateTimeSlots = () => {
-    const slots = []
-    const startHour = 10
-    const endHour = 20
-    
-    for (let hour = startHour; hour < endHour; hour++) {
-      slots.push(`${hour.toString().padStart(2, '0')}:00`)
-      slots.push(`${hour.toString().padStart(2, '0')}:30`)
-    }
-    
-    return slots
-  }
-
-  const availableDates = generateAvailableDates()
-  const timeSlots = generateTimeSlots()
 
   // Filter specialists based on selected service
   const filteredSpecialists = formData.service 
@@ -178,10 +138,8 @@ const Book = () => {
       case 2:
         return formData.specialist !== ''
       case 3:
-        return formData.date !== '' && formData.time !== ''
-      case 4:
         return formData.firstName && formData.lastName && formData.email && formData.phone
-      case 5:
+      case 4:
         return true
       default:
         return false
@@ -202,66 +160,20 @@ const Book = () => {
           <div className="w-20 h-20 bg-accent-teal rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-12 h-12 text-white" />
           </div>
-          
+
           <h1 className="text-3xl font-bold font-heading text-neutral-900 dark:text-white mb-4">
-            Booking Confirmed!
+            Thank You!
           </h1>
-          
+
           <p className="text-lg text-neutral-600 dark:text-neutral-300 mb-8">
-            Your appointment has been successfully scheduled. We've sent a confirmation email with all the details.
+            Thank you for your submission! We will contact you shortly to confirm your booking.
           </p>
-
-          <Card className="p-6 mb-8 text-left">
-            <h3 className="font-semibold text-neutral-900 dark:text-white mb-4">Appointment Details</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Booking ID:</span>
-                <span className="font-mono font-bold text-primary-600">{bookingId}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Service:</span>
-                <span className="font-medium">{getSelectedService()?.name}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Doctor:</span>
-                <span className="font-medium">{getSelectedSpecialist()?.name}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Date & Time:</span>
-                <span className="font-medium">{formData.date} at {formData.time}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Duration:</span>
-                <span className="font-medium">{getSelectedService()?.duration}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Price:</span>
-                <span className="font-medium text-primary-600">{getSelectedService()?.price}</span>
-              </div>
-            </div>
-          </Card>
-
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-8">
-            <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">What's Next?</h4>
-            <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1 text-left">
-              <li>• Check your email for confirmation and pre-visit forms</li>
-              <li>• Arrive 15 minutes early for your appointment</li>
-              <li>• Bring a valid ID and insurance card</li>
-              <li>• Download our mobile app for easy rescheduling</li>
-            </ul>
-          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => navigate('/dashboard')}
+              onClick={() => navigate('/')}
               variant="primary"
               icon={<User size={16} />}
-            >
-              View Dashboard
-            </Button>
-            <Button
-              onClick={() => navigate('/')}
-              variant="outline"
             >
               Back to Home
             </Button>
@@ -287,7 +199,7 @@ const Book = () => {
         {/* Progress Bar */}
         <div className="mb-12">
           <div className="flex justify-between items-center mb-4">
-            {[1, 2, 3, 4, 5].map((step) => (
+            {[1, 2, 3, 4].map((step) => (
               <div key={step} className="flex items-center">
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold ${
                   step <= currentStep
@@ -296,7 +208,7 @@ const Book = () => {
                 }`}>
                   {step}
                 </div>
-                {step < 5 && (
+                {step < 4 && (
                   <div className={`h-1 w-full mx-2 ${
                     step < currentStep
                       ? 'bg-primary-500'
@@ -309,7 +221,6 @@ const Book = () => {
           <div className="flex justify-between text-sm text-neutral-600 dark:text-neutral-300">
             <span>Service</span>
             <span>Specialist</span>
-            <span>Date & Time</span>
             <span>Details</span>
             <span>Confirm</span>
           </div>
@@ -343,9 +254,8 @@ const Book = () => {
                       <h3 className="font-semibold text-neutral-900 dark:text-white mb-2">
                         {service.name}
                       </h3>
-                      <div className="flex justify-between text-sm text-neutral-600 dark:text-neutral-300">
+                      <div className="text-sm text-neutral-600 dark:text-neutral-300">
                         <span>{service.duration}</span>
-                        <span className="font-medium text-primary-600">{service.price}</span>
                       </div>
                     </button>
                   ))}
@@ -420,98 +330,10 @@ const Book = () => {
               </motion.div>
             )}
 
-            {/* Step 3: Select Date & Time */}
+            {/* Step 3: Personal Details */}
             {currentStep === 3 && (
               <motion.div
                 key="step3"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="flex-1"
-              >
-                <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
-                  Select Date & Time
-                </h2>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {/* Date Selection */}
-                  <div>
-                    <h3 className="font-semibold text-neutral-900 dark:text-white mb-4">
-                      Choose a Date
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3">
-                      {availableDates.slice(0, 14).map((date) => {
-                        const dateStr = date.toISOString().split('T')[0]
-                        const dayName = date.toLocaleDateString('en-US', { weekday: 'short' })
-                        const dayNum = date.getDate()
-                        const month = date.toLocaleDateString('en-US', { month: 'short' })
-                        
-                        return (
-                          <button
-                            key={dateStr}
-                            onClick={() => setFormData(prev => ({ ...prev, date: dateStr }))}
-                            className={`p-3 border-2 rounded-lg text-center transition-all ${
-                              formData.date === dateStr
-                                ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20'
-                                : 'border-neutral-200 dark:border-neutral-700 hover:border-primary-300'
-                            }`}
-                          >
-                            <div className="text-sm text-neutral-600 dark:text-neutral-300">{dayName}</div>
-                            <div className="font-bold text-neutral-900 dark:text-white">{dayNum}</div>
-                            <div className="text-sm text-neutral-600 dark:text-neutral-300">{month}</div>
-                          </button>
-                        )
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Time Selection */}
-                  <div>
-                    <h3 className="font-semibold text-neutral-900 dark:text-white mb-4">
-                      Choose a Time
-                    </h3>
-                    <div className="grid grid-cols-3 gap-2 max-h-80 overflow-y-auto">
-                      {timeSlots.map((time) => (
-                        <button
-                          key={time}
-                          onClick={() => setFormData(prev => ({ ...prev, time }))}
-                          disabled={!formData.date}
-                          className={`p-2 border-2 rounded-lg text-sm transition-all ${
-                            formData.time === time
-                              ? 'border-primary-500 bg-primary-50 dark:bg-primary-900/20'
-                              : 'border-neutral-200 dark:border-neutral-700 hover:border-primary-300 disabled:opacity-50 disabled:cursor-not-allowed'
-                          }`}
-                        >
-                          {time}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {formData.date && formData.time && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mt-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg"
-                  >
-                    <p className="text-green-800 dark:text-green-200">
-                      ✓ Selected: {new Date(formData.date).toLocaleDateString('en-US', { 
-                        weekday: 'long', 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })} at {formData.time}
-                    </p>
-                  </motion.div>
-                )}
-              </motion.div>
-            )}
-
-            {/* Step 4: Personal Details */}
-            {currentStep === 4 && (
-              <motion.div
-                key="step4"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
@@ -608,24 +430,24 @@ const Book = () => {
               </motion.div>
             )}
 
-            {/* Step 5: Confirmation */}
-            {currentStep === 5 && (
+            {/* Step 4: Confirmation */}
+            {currentStep === 4 && (
               <motion.div
-                key="step5"
+                key="step4"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 className="flex-1"
               >
                 <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
-                  Confirm Your Appointment
+                  Confirm Your Request
                 </h2>
-                
+
                 <div className="bg-neutral-50 dark:bg-neutral-800 rounded-lg p-6 mb-6">
                   <h3 className="font-semibold text-neutral-900 dark:text-white mb-4">
-                    Appointment Summary
+                    Request Summary
                   </h3>
-                  
+
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span className="text-neutral-600 dark:text-neutral-300">Service:</span>
@@ -633,44 +455,32 @@ const Book = () => {
                         {getSelectedService()?.name}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between">
                       <span className="text-neutral-600 dark:text-neutral-300">Doctor:</span>
                       <span className="font-medium text-neutral-900 dark:text-white">
                         {getSelectedSpecialist()?.name}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between">
-                      <span className="text-neutral-600 dark:text-neutral-300">Date:</span>
+                      <span className="text-neutral-600 dark:text-neutral-300">Contact Name:</span>
                       <span className="font-medium text-neutral-900 dark:text-white">
-                        {new Date(formData.date).toLocaleDateString('en-US', { 
-                          weekday: 'long', 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
-                        })}
+                        {formData.firstName} {formData.lastName}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between">
-                      <span className="text-neutral-600 dark:text-neutral-300">Time:</span>
+                      <span className="text-neutral-600 dark:text-neutral-300">Email:</span>
                       <span className="font-medium text-neutral-900 dark:text-white">
-                        {formData.time}
+                        {formData.email}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between">
-                      <span className="text-neutral-600 dark:text-neutral-300">Duration:</span>
+                      <span className="text-neutral-600 dark:text-neutral-300">Phone:</span>
                       <span className="font-medium text-neutral-900 dark:text-white">
-                        {getSelectedService()?.duration}
-                      </span>
-                    </div>
-                    
-                    <div className="flex justify-between border-t pt-4">
-                      <span className="text-neutral-600 dark:text-neutral-300">Total Cost:</span>
-                      <span className="font-bold text-lg text-primary-600 dark:text-primary-400">
-                        {getSelectedService()?.price}
+                        {formData.phone}
                       </span>
                     </div>
                   </div>
@@ -681,13 +491,13 @@ const Book = () => {
                     <Shield className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-1">
-                        Our Commitment to You
+                        What Happens Next
                       </h4>
                       <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
-                        <li>• Free cancellation up to 24 hours before appointment</li>
+                        <li>• Our team will contact you within 24 hours</li>
+                        <li>• We'll schedule your appointment at a convenient time</li>
                         <li>• All safety protocols followed (sterilization, PPE)</li>
-                        <li>• Flexible rescheduling options available</li>
-                        <li>• Insurance verification before visit</li>
+                        <li>• Flexible scheduling to fit your needs</li>
                       </ul>
                     </div>
                   </div>
