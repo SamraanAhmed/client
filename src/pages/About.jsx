@@ -15,10 +15,10 @@ import Button from '../components/ui/Button'
 
 const About = () => {
   const stats = [
-    { number: '10+', label: 'Years of Excellence' },
+    { number: '5+', label: 'Years of Experience' },
     { number: '5,000+', label: 'Happy Patients' },
-    { number: '15+', label: 'Expert Specialists' },
-    { number: '4.9', label: 'Star Rating' }
+    { number: '6', label: 'Professional Dentists' },
+    { number: '5', label: 'Star Rating' }
   ]
 
   const values = [
