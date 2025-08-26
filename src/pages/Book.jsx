@@ -62,13 +62,13 @@ const Book = () => {
   }, [user])
 
   const services = [
-    { id: 'checkup', name: 'General Checkup & Cleaning', duration: '60 min', price: 'PKR 42,000' },
-    { id: 'whitening', name: 'Teeth Whitening', duration: '90 min', price: 'PKR 112,000' },
-    { id: 'orthodontics', name: 'Orthodontic Consultation', duration: '45 min', price: 'PKR 56,000' },
-    { id: 'implants', name: 'Dental Implant Consultation', duration: '60 min', price: 'PKR 70,000' },
-    { id: 'root-canal', name: 'Root Canal Treatment', duration: '90 min', price: 'PKR 224,000' },
-    { id: 'emergency', name: 'Emergency Care', duration: '30 min', price: 'PKR 56,000' },
-    { id: 'consultation', name: 'General Consultation', duration: '30 min', price: 'Free' }
+    { id: 'checkup', name: 'General Checkup & Cleaning', duration: '60 min' },
+    { id: 'whitening', name: 'Teeth Whitening', duration: '90 min' },
+    { id: 'orthodontics', name: 'Orthodontic Consultation', duration: '45 min' },
+    { id: 'implants', name: 'Dental Implant Consultation', duration: '60 min' },
+    { id: 'root-canal', name: 'Root Canal Treatment', duration: '90 min' },
+    { id: 'emergency', name: 'Emergency Care', duration: '30 min' },
+    { id: 'consultation', name: 'General Consultation', duration: '30 min' }
   ]
 
   const specialists = [
