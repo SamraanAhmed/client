@@ -97,26 +97,6 @@ const Home = () => {
     }
   ]
 
-  const testimonials = [
-    {
-      text: "The best dental experience I've ever had! The staff is incredibly friendly and the procedures are completely painless.",
-      author: "Jennifer M.",
-      rating: 5,
-      procedure: "Teeth Whitening"
-    },
-    {
-      text: "Dr. Johnson saved my tooth with a root canal. I was terrified but felt no pain at all. Highly recommend!",
-      author: "Robert K.",
-      rating: 5,
-      procedure: "Root Canal"
-    },
-    {
-      text: "My kids actually look forward to their dental visits now. The pediatric team is amazing with children.",
-      author: "Lisa T.",
-      rating: 5,
-      procedure: "Pediatric Care"
-    }
-  ]
 
   return (
     <div className="min-h-screen">
@@ -385,68 +365,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-neutral-50 dark:bg-neutral-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold font-heading text-neutral-900 dark:text-white mb-6">
-              What Our Patients Say
-            </h2>
-            <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-              Read testimonials from our satisfied patients who trust us with their dental care.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="p-8 h-full">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={16} className="text-accent-yellow fill-current" />
-                    ))}
-                  </div>
-                  <blockquote className="text-neutral-700 dark:text-neutral-300 mb-6 italic">
-                    "{testimonial.text}"
-                  </blockquote>
-                  <div className="border-t pt-4">
-                    <p className="font-semibold text-neutral-900 dark:text-white">
-                      {testimonial.author}
-                    </p>
-                    <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                      {testimonial.procedure}
-                    </p>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button
-              as={Link}
-              to="/testimonials"
-              variant="secondary"
-              size="lg"
-              icon={<ArrowRight size={20} />}
-              iconPosition="right"
-            >
-              Read More Reviews
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
