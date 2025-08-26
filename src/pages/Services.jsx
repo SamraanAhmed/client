@@ -293,12 +293,9 @@ const Services = () => {
                       </p>
 
                       {/* Price and Duration */}
-                      <div className="space-y-3 mb-6">
-                        <div className="flex items-center justify-center space-x-4">
-                          <div className="flex items-center text-primary-600 dark:text-primary-400">
-                            <DollarSign className="w-4 h-4 mr-1" />
-                            <span className="font-bold text-lg">{service.price}</span>
-                          </div>
+                      <div className="space-y-2 mb-4">
+                        <div className="text-center">
+                          <span className="font-bold text-xl text-primary-600 dark:text-primary-400">{service.price}</span>
                         </div>
                         <div className="flex items-center justify-center text-neutral-600 dark:text-neutral-300">
                           <Clock className="w-4 h-4 mr-2" />
