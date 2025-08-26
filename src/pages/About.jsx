@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   Award,
   Heart,
@@ -10,41 +10,45 @@ import {
   MapPin,
   Star,
   CheckCircle,
-  Calendar
-} from 'lucide-react'
-import Card from '../components/ui/Card'
-import Button from '../components/ui/Button'
+  Calendar,
+} from 'lucide-react';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 
 const About = () => {
   const stats = [
     { number: '5+', label: 'Years of Experience' },
     { number: '5,000+', label: 'Happy Patients' },
     { number: '6', label: 'Professional Dentists' },
-    { number: '5', label: 'Star Rating' }
-  ]
+    { number: '4.9', label: 'Star Rating' },
+  ];
 
   const values = [
     {
       icon: <Heart className="w-8 h-8 text-red-500" />,
       title: 'Compassionate Care',
-      description: 'We believe every patient deserves gentle, personalized care in a comfortable environment.'
+      description:
+        'We believe every patient deserves gentle, personalized care in a comfortable environment.',
     },
     {
       icon: <Shield className="w-8 h-8 text-primary-500" />,
       title: 'Safety First',
-      description: 'State-of-the-art sterilization and safety protocols ensure your health and peace of mind.'
+      description:
+        'State-of-the-art sterilization and safety protocols ensure your health and peace of mind.',
     },
     {
       icon: <Award className="w-8 h-8 text-accent-yellow" />,
       title: 'Excellence',
-      description: 'Our commitment to continuing education and advanced techniques delivers superior results.'
+      description:
+        'Our commitment to continuing education and advanced techniques delivers superior results.',
     },
     {
       icon: <Users className="w-8 h-8 text-accent-teal" />,
       title: 'Family-Focused',
-      description: 'We provide comprehensive dental care for patients of all ages, from children to seniors.'
-    }
-  ]
+      description:
+        'We provide comprehensive dental care for patients of all ages, from children to seniors.',
+    },
+  ];
 
   const team = [
     {
@@ -53,8 +57,9 @@ const About = () => {
       specialty: 'General & Cosmetic Dentistry',
       experience: '15+ years',
       education: 'DDS, Columbia University',
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face',
-      bio: 'Dr. Johnson founded Krachi Dental Clinic with a vision to provide exceptional dental care in a warm, welcoming environment. She specializes in cosmetic dentistry and is known for her gentle approach.'
+      image:
+        'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face',
+      bio: 'Dr. Johnson founded Karachi Dental Clinic with a vision to provide exceptional dental care in a warm, welcoming environment. She specializes in cosmetic dentistry and is known for her gentle approach.',
     },
     {
       name: 'Dr. Michael Chen',
@@ -62,8 +67,9 @@ const About = () => {
       specialty: 'Orthodontics & Invisalign',
       experience: '12+ years',
       education: 'DDS, MSc Orthodontics, NYU',
-      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face',
-      bio: 'Dr. Chen is our orthodontic specialist with extensive experience in traditional braces and Invisalign. He has helped thousands of patients achieve their perfect smile.'
+      image:
+        'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face',
+      bio: 'Dr. Chen is our orthodontic specialist with extensive experience in traditional braces and Invisalign. He has helped thousands of patients achieve their perfect smile.',
     },
     {
       name: 'Dr. Emily Rodriguez',
@@ -71,10 +77,11 @@ const About = () => {
       specialty: 'Oral Surgery & Implants',
       experience: '10+ years',
       education: 'DDS, Oral Surgery Residency, UCSF',
-      image: 'https://images.unsplash.com/photo-1594824804732-5f7cf38f9baa?w=300&h=300&fit=crop&crop=face',
-      bio: 'Dr. Rodriguez specializes in oral surgery and dental implants. Her precise surgical techniques and caring approach make complex procedures comfortable for patients.'
-    }
-  ]
+      image:
+        'https://images.unsplash.com/photo-1594824804732-5f7cf38f9baa?w=300&h=300&fit=crop&crop=face',
+      bio: 'Dr. Rodriguez specializes in oral surgery and dental implants. Her precise surgical techniques and caring approach make complex procedures comfortable for patients.',
+    },
+  ];
 
   const certifications = [
     'American Dental Association (ADA)',
@@ -82,8 +89,8 @@ const About = () => {
     'Academy of General Dentistry',
     'International Congress of Oral Implantologists',
     'American Association of Orthodontists',
-    'Invisalign Certified Provider'
-  ]
+    'Invisalign Certified Provider',
+  ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900">
@@ -96,11 +103,12 @@ const About = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold font-heading mb-6">
-              About Krachi
+              About Us
             </h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-              Providing compassionate dental care since 2010. Your smile is our priority, 
-              and we're committed to making every visit comfortable and stress-free.
+              Providing compassionate dental care since 2020. Your smile is our
+              priority, and we're committed to making every visit comfortable
+              and stress-free.
             </p>
           </motion.div>
         </div>
@@ -145,19 +153,24 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-lg text-neutral-700 dark:text-neutral-300">
                 <p>
-                  Krachi Dental Clinic was founded in 2010 with a simple mission: to provide 
-                  exceptional dental care in a warm, welcoming environment. Dr. Sarah Johnson started 
-                  this practice after recognizing the need for patient-centered dental care in New York.
+                  Karachi Dental Clinic was founded in 2010 with a simple
+                  mission: to provide exceptional dental care in a warm,
+                  welcoming environment. Dr. Sarah Johnson started this practice
+                  after recognizing the need for patient-centered dental care in
+                  New York.
                 </p>
                 <p>
-                  Over the years, we've grown into a comprehensive dental practice serving thousands 
-                  of patients. Our team of specialists works together to provide everything from 
-                  routine cleanings to complex oral surgeries, all under one roof.
+                  Over the years, we've grown into a comprehensive dental
+                  practice serving thousands of patients. Our team of
+                  specialists works together to provide everything from routine
+                  cleanings to complex oral surgeries, all under one roof.
                 </p>
                 <p>
-                  What sets us apart is our commitment to using the latest technology while maintaining 
-                  the personal touch that makes each patient feel like family. We believe that quality 
-                  dental care should be accessible, affordable, and comfortable for everyone.
+                  What sets us apart is our commitment to using the latest
+                  technology while maintaining the personal touch that makes
+                  each patient feel like family. We believe that quality dental
+                  care should be accessible, affordable, and comfortable for
+                  everyone.
                 </p>
               </div>
             </motion.div>
@@ -191,8 +204,9 @@ const About = () => {
               Our Professional Team
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto mb-8">
-              We have 6 professional dentists specializing in various fields of dentistry, each bringing
-              years of experience and expertise to provide you with comprehensive oral healthcare.
+              We have 6 professional dentists specializing in various fields of
+              dentistry, each bringing years of experience and expertise to
+              provide you with comprehensive oral healthcare.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -231,7 +245,8 @@ const About = () => {
               Our Values
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-              The principles that guide everything we do at Krachi Dental Clinic
+              The principles that guide everything we do at Karachi Dental
+              Clinic
             </p>
           </motion.div>
 
@@ -276,7 +291,8 @@ const About = () => {
               Meet Our Team
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-              Our experienced team of dental professionals is dedicated to providing you with the highest quality care
+              Our experienced team of dental professionals is dedicated to
+              providing you with the highest quality care
             </p>
           </motion.div>
 
@@ -337,11 +353,13 @@ const About = () => {
                   'Laser dentistry for precise treatment',
                   'Intraoral cameras for detailed diagnosis',
                   '3D imaging for implant planning',
-                  'Nitrous oxide for comfortable procedures'
+                  'Nitrous oxide for comfortable procedures',
                 ].map((tech, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-accent-teal flex-shrink-0" />
-                    <span className="text-neutral-700 dark:text-neutral-300">{tech}</span>
+                    <span className="text-neutral-700 dark:text-neutral-300">
+                      {tech}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -360,7 +378,9 @@ const About = () => {
                 {certifications.map((cert, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <Award className="w-5 h-5 text-accent-yellow flex-shrink-0" />
-                    <span className="text-neutral-700 dark:text-neutral-300">{cert}</span>
+                    <span className="text-neutral-700 dark:text-neutral-300">
+                      {cert}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -379,10 +399,11 @@ const About = () => {
             className="space-y-8"
           >
             <h2 className="text-4xl font-bold font-heading">
-              Ready to Experience the Krachi Difference?
+              Ready to Experience the Karachi Difference?
             </h2>
             <p className="text-xl text-primary-100">
-              Schedule your appointment today and discover why thousands of patients trust us with their smiles.
+              Schedule your appointment today and discover why thousands of
+              patients trust us with their smiles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -404,7 +425,7 @@ const About = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

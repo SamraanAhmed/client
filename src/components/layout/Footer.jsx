@@ -1,31 +1,31 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Facebook, 
-  Twitter, 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Twitter,
   Instagram,
   ArrowRight,
-  Heart
-} from 'lucide-react'
-import Logo from '../common/Logo'
-import Button from '../ui/Button'
-import { useTheme } from '../../contexts/ThemeContext'
+  Heart,
+} from 'lucide-react';
+import Logo from '../common/Logo';
+import Button from '../ui/Button';
+import { useTheme } from '../../contexts/ThemeContext';
 
 const Footer = () => {
-  const { isDark } = useTheme()
-  const currentYear = new Date().getFullYear()
+  const { isDark } = useTheme();
+  const currentYear = new Date().getFullYear();
 
   const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Specialists', href: '/specialists' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-  ]
+    { name: 'Contact', href: '/contact' },
+    // { name: 'Blog', href: '/blog' },
+  ];
 
   const services = [
     { name: 'General Checkup', href: '/services/general-checkup' },
@@ -34,13 +34,13 @@ const Footer = () => {
     { name: 'Dental Implants', href: '/services/dental-implants' },
     { name: 'Root Canal', href: '/services/root-canal' },
     { name: 'Emergency Care', href: '/services/emergency' },
-  ]
+  ];
 
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Refund Policy', href: '/refund' },
-  ]
+  ];
 
   return (
     <footer className="bg-neutral-900 dark:bg-black text-white">
@@ -52,45 +52,53 @@ const Footer = () => {
             <div className="space-y-6">
               <Logo variant="white" className="h-12 w-auto" />
               <p className="text-neutral-300 text-sm leading-relaxed">
-                Providing compassionate dental care since 2010. Your smile is our priority, 
-                and we're committed to making every visit comfortable and stress-free.
+                Providing compassionate dental care since 2020. Your smile is
+                our priority, and we're committed to making every visit
+                comfortable and stress-free.
               </p>
-              
+
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
-                  <MapPin size={16} className="text-primary-400 mt-1 flex-shrink-0" />
+                  <MapPin
+                    size={16}
+                    className="text-primary-400 mt-1 flex-shrink-0"
+                  />
                   <span className="text-sm text-neutral-300">
-                    123 Broadway Street<br />
+                    123 Broadway Street
+                    <br />
                     New York, NY 10001
                   </span>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <Phone size={16} className="text-primary-400 flex-shrink-0" />
-                  <a 
-                    href="tel:+1-555-123-4567" 
+                  <a
+                    href="tel:03338353771"
                     className="text-sm text-neutral-300 hover:text-white transition-colors"
                   >
-                    +1 (555) 123-4567
+                    0333 8353771
                   </a>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <Mail size={16} className="text-primary-400 flex-shrink-0" />
-                  <a 
-                    href="mailto:info@krachidentalclinic.com" 
+                  <a
+                    href="mailto:info@Karachidentalclinic.com"
                     className="text-sm text-neutral-300 hover:text-white transition-colors"
                   >
-                    info@krachidentalclinic.com
+                    info@Karachidentalclinic.com
                   </a>
                 </div>
-                
+
                 <div className="flex items-start space-x-3">
-                  <Clock size={16} className="text-primary-400 mt-1 flex-shrink-0" />
+                  <Clock
+                    size={16}
+                    className="text-primary-400 mt-1 flex-shrink-0"
+                  />
                   <div className="text-sm text-neutral-300">
-                    <p>Mon - Sat: 10:00 AM - 8:00 PM</p>
+                    <p>Mon - Sat: 5:00 PM - 9:30 PM</p>
                     <p>Sunday: Closed</p>
-                    <p className="text-accent-teal">Emergency: 24/7</p>
+                    {/* <p className="text-accent-teal">Emergency: 24/7</p> */}
                   </div>
                 </div>
               </div>
@@ -106,7 +114,10 @@ const Footer = () => {
                       to={link.href}
                       className="text-sm text-neutral-300 hover:text-white transition-colors flex items-center group"
                     >
-                      <ArrowRight size={14} className="mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                      <ArrowRight
+                        size={14}
+                        className="mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200"
+                      />
                       {link.name}
                     </Link>
                   </li>
@@ -124,7 +135,10 @@ const Footer = () => {
                       to={service.href}
                       className="text-sm text-neutral-300 hover:text-white transition-colors flex items-center group"
                     >
-                      <ArrowRight size={14} className="mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                      <ArrowRight
+                        size={14}
+                        className="mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200"
+                      />
                       {service.name}
                     </Link>
                   </li>
@@ -135,11 +149,12 @@ const Footer = () => {
             {/* Newsletter & Social */}
             <div>
               <h3 className="text-lg font-semibold mb-6">Stay Connected</h3>
-              
+
               {/* Newsletter */}
               <div className="space-y-4 mb-8">
                 <p className="text-sm text-neutral-300">
-                  Subscribe to our newsletter for dental tips and special offers.
+                  Subscribe to our newsletter for dental tips and special
+                  offers.
                 </p>
                 <form className="space-y-3">
                   <input
@@ -160,7 +175,7 @@ const Footer = () => {
               </div>
 
               {/* Social Links */}
-              <div>
+              {/* <div>
                 <h4 className="text-sm font-medium mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
                   <a
@@ -185,7 +200,7 @@ const Footer = () => {
                     <Instagram size={18} />
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -194,9 +209,9 @@ const Footer = () => {
         <div className="border-t border-neutral-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-neutral-400">
-              © {currentYear} Krachi Dental Clinic. All rights reserved.
+              © {currentYear} Karachi Dental Clinic. All rights reserved.
             </div>
-            
+
             <div className="flex items-center space-x-6">
               {legalLinks.map((link) => (
                 <Link
@@ -208,15 +223,16 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-            
+
             <div className="flex items-center text-sm text-neutral-400">
-              Made with <Heart size={14} className="mx-1 text-red-500" /> for healthier smiles
+              Made with <Heart size={14} className="mx-1 text-red-500" /> for
+              healthier smiles
             </div>
           </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

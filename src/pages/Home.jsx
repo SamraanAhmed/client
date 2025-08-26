@@ -1,102 +1,108 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { 
-  Calendar, 
-  Phone, 
-  MessageCircle, 
-  Star, 
-  Shield, 
-  Award, 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import {
+  Calendar,
+  Phone,
+  MessageCircle,
+  Star,
+  Shield,
+  Award,
   Users,
   CheckCircle,
   ArrowRight,
   Sparkles,
   Heart,
-  Clock
-} from 'lucide-react'
-import Button from '../components/ui/Button'
-import Card from '../components/ui/Card'
+  Clock,
+} from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
 
 const Home = () => {
   const services = [
     {
       icon: <CheckCircle className="w-8 h-8 text-primary-500" />,
-      title: "General Checkup",
-      description: "Comprehensive dental examination and cleaning to maintain optimal oral health.",
-      href: "/services/general-checkup"
+      title: 'General Checkup',
+      description:
+        'Comprehensive dental examination and cleaning to maintain optimal oral health.',
+      href: '/services/general-checkup',
     },
     {
       icon: <Sparkles className="w-8 h-8 text-accent-yellow" />,
-      title: "Teeth Whitening",
-      description: "Achieve a dazzling smile with our professional whitening treatments.",
-      href: "/services/teeth-whitening"
+      title: 'Teeth Whitening',
+      description:
+        'Achieve a dazzling smile with our professional whitening treatments.',
+      href: '/services/teeth-whitening',
     },
     {
       icon: <Shield className="w-8 h-8 text-accent-teal" />,
-      title: "Orthodontics",
-      description: "Straighten your teeth with modern braces and Invisalign solutions.",
-      href: "/services/orthodontics"
+      title: 'Orthodontics',
+      description:
+        'Straighten your teeth with modern braces and Invisalign solutions.',
+      href: '/services/orthodontics',
     },
     {
       icon: <Heart className="w-8 h-8 text-red-500" />,
-      title: "Dental Implants",
-      description: "Permanent solution for missing teeth with natural-looking results.",
-      href: "/services/dental-implants"
+      title: 'Dental Implants',
+      description:
+        'Permanent solution for missing teeth with natural-looking results.',
+      href: '/services/dental-implants',
     },
     {
       icon: <Shield className="w-8 h-8 text-primary-500" />,
-      title: "Root Canal",
-      description: "Pain-free root canal therapy to save your natural teeth.",
-      href: "/services/root-canal"
+      title: 'Root Canal',
+      description: 'Pain-free root canal therapy to save your natural teeth.',
+      href: '/services/root-canal',
     },
     {
       icon: <Clock className="w-8 h-8 text-red-600" />,
-      title: "Emergency Care",
-      description: "24/7 emergency dental services for urgent dental problems.",
-      href: "/services/emergency"
-    }
-  ]
+      title: 'Emergency Care',
+      description: '24/7 emergency dental services for urgent dental problems.',
+      href: '/services/emergency',
+    },
+  ];
 
   const whyChooseUs = [
     {
       icon: <Shield className="w-6 h-6 text-primary-500" />,
-      title: "Pain-Free Treatments",
-      description: "Advanced anesthesia and gentle techniques for comfortable procedures."
+      title: 'Pain-Free Treatments',
+      description:
+        'Advanced anesthesia and gentle techniques for comfortable procedures.',
     },
     {
       icon: <Award className="w-6 h-6 text-accent-teal" />,
-      title: "State-of-the-Art Equipment",
-      description: "Latest dental technology for precise diagnosis and treatment."
+      title: 'State-of-the-Art Equipment',
+      description:
+        'Latest dental technology for precise diagnosis and treatment.',
     },
     {
       icon: <Users className="w-6 h-6 text-accent-yellow" />,
-      title: "Experienced Specialists",
-      description: "Board-certified dentists with years of specialized experience."
-    }
-  ]
+      title: 'Experienced Specialists',
+      description:
+        'Board-certified dentists with years of specialized experience.',
+    },
+  ];
 
   const specialists = [
     {
-      name: "Dr. Sarah Johnson",
-      specialty: "General Dentistry",
-      experience: "15+ years",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face"
+      name: 'Dr. Ahmed Sheikh',
+      specialty: 'Oral and Maxillofacial Surgery',
+      image:
+        'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=150&h=150&fit=crop&crop=face',
     },
     {
-      name: "Dr. Michael Chen",
-      specialty: "Orthodontics",
-      experience: "12+ years", 
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face"
+      name: 'Dr. Tayyab Sheikh',
+      specialty: 'Prosthodontics & Endodontics',
+      image:
+        'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face',
     },
     {
-      name: "Dr. Emily Rodriguez",
-      specialty: "Oral Surgery",
-      experience: "10+ years",
-      image: "https://images.unsplash.com/photo-1594824804732-5f7cf38f9baa?w=150&h=150&fit=crop&crop=face"
-    }
-  ]
-
+      name: 'Dr. Jawad',
+      specialty: 'Orthodontics',
+      image:
+        'https://images.unsplash.com/photo-1594824804732-5f7cf38f9baa?w=150&h=150&fit=crop&crop=face',
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -121,12 +127,14 @@ const Home = () => {
             className="space-y-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold font-heading leading-tight">
-              Bright Smiles,<br />
+              Bright Smiles,
+              <br />
               <span className="text-accent-yellow">Lasting Health</span>
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto leading-relaxed">
-              Expert dental care in New York – Comfortable, affordable, and trusted by thousands of patients.
+              Expert dental care in New York – Comfortable, affordable, and
+              trusted by thousands of patients.
             </p>
 
             {/* Trust Signals */}
@@ -179,7 +187,7 @@ const Home = () => {
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Indicator
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -197,7 +205,7 @@ const Home = () => {
               className="w-1 h-3 bg-white/70 rounded-full mt-2"
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </section>
 
       {/* Services Section */}
@@ -213,7 +221,8 @@ const Home = () => {
               Our Services
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-              Comprehensive dental care tailored to your needs, from routine checkups to specialized treatments.
+              Comprehensive dental care tailored to your needs, from routine
+              checkups to specialized treatments.
             </p>
           </motion.div>
 
@@ -241,7 +250,10 @@ const Home = () => {
                     </p>
                     <div className="flex items-center justify-center text-primary-500 group-hover:text-primary-600 transition-colors">
                       <span className="font-medium">Learn More</span>
-                      <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight
+                        size={16}
+                        className="ml-2 group-hover:translate-x-1 transition-transform"
+                      />
                     </div>
                   </Link>
                 </Card>
@@ -261,10 +273,11 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold font-heading text-neutral-900 dark:text-white mb-6">
-              Why Choose Krachi?
+              Why Choose Karachi?
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-              We're committed to providing exceptional dental care in a comfortable, modern environment.
+              We're committed to providing exceptional dental care in a
+              comfortable, modern environment.
             </p>
           </motion.div>
 
@@ -308,7 +321,8 @@ const Home = () => {
               Meet Our Specialists
             </h2>
             <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-              Our experienced team of dental professionals is here to provide you with the highest quality care.
+              Our experienced team of dental professionals is here to provide
+              you with the highest quality care.
             </p>
           </motion.div>
 
@@ -365,7 +379,6 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -379,7 +392,8 @@ const Home = () => {
               Ready for Your Best Smile?
             </h2>
             <p className="text-xl text-primary-100">
-              Don't wait – book your appointment today and take the first step towards optimal dental health.
+              Don't wait – book your appointment today and take the first step
+              towards optimal dental health.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -396,17 +410,17 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 icon={<Phone size={20} />}
-                href="tel:+1-555-123-4567"
+                href="tel:03338353771"
                 className="border-white text-white hover:bg-white hover:text-primary-600"
               >
-                Call Emergency: (555) 123-4567
+                Call Emergency: 0333 8353771
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
