@@ -67,8 +67,8 @@ const Contact = () => {
       subtitle: '24/7 Emergency Support',
       details: [
         'Main: (555) 123-4567',
-        'Emergency: (555) 123-4568',
-        'Fax: (555) 123-4569'
+        'WhatsApp: 0333 8353771',
+        'Emergency: (555) 123-4568'
       ],
       color: 'bg-green-50 text-green-600',
       action: { text: 'Call Now', href: 'tel:+1-555-123-4567', icon: <Phone className="w-4 h-4" /> }
