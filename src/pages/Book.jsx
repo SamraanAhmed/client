@@ -526,14 +526,14 @@ const Book = () => {
                 className="flex-1"
               >
                 <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6">
-                  Confirm Your Appointment
+                  Confirm Your Request
                 </h2>
-                
+
                 <div className="bg-neutral-50 dark:bg-neutral-800 rounded-lg p-6 mb-6">
                   <h3 className="font-semibold text-neutral-900 dark:text-white mb-4">
-                    Appointment Summary
+                    Request Summary
                   </h3>
-                  
+
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span className="text-neutral-600 dark:text-neutral-300">Service:</span>
@@ -541,44 +541,32 @@ const Book = () => {
                         {getSelectedService()?.name}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between">
                       <span className="text-neutral-600 dark:text-neutral-300">Doctor:</span>
                       <span className="font-medium text-neutral-900 dark:text-white">
                         {getSelectedSpecialist()?.name}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between">
-                      <span className="text-neutral-600 dark:text-neutral-300">Date:</span>
+                      <span className="text-neutral-600 dark:text-neutral-300">Contact Name:</span>
                       <span className="font-medium text-neutral-900 dark:text-white">
-                        {new Date(formData.date).toLocaleDateString('en-US', { 
-                          weekday: 'long', 
-                          year: 'numeric', 
-                          month: 'long', 
-                          day: 'numeric' 
-                        })}
+                        {formData.firstName} {formData.lastName}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between">
-                      <span className="text-neutral-600 dark:text-neutral-300">Time:</span>
+                      <span className="text-neutral-600 dark:text-neutral-300">Email:</span>
                       <span className="font-medium text-neutral-900 dark:text-white">
-                        {formData.time}
+                        {formData.email}
                       </span>
                     </div>
-                    
+
                     <div className="flex justify-between">
-                      <span className="text-neutral-600 dark:text-neutral-300">Duration:</span>
+                      <span className="text-neutral-600 dark:text-neutral-300">Phone:</span>
                       <span className="font-medium text-neutral-900 dark:text-white">
-                        {getSelectedService()?.duration}
-                      </span>
-                    </div>
-                    
-                    <div className="flex justify-between border-t pt-4">
-                      <span className="text-neutral-600 dark:text-neutral-300">Total Cost:</span>
-                      <span className="font-bold text-lg text-primary-600 dark:text-primary-400">
-                        {getSelectedService()?.price}
+                        {formData.phone}
                       </span>
                     </div>
                   </div>
