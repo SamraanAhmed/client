@@ -27,8 +27,6 @@ const Book = () => {
   const [formData, setFormData] = useState({
     service: '',
     specialist: '',
-    date: '',
-    time: '',
     firstName: '',
     lastName: '',
     email: '',
