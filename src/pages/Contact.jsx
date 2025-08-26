@@ -90,8 +90,7 @@ const Contact = () => {
       title: 'Office Hours',
       subtitle: 'Flexible Scheduling Available',
       details: [
-        'Monday - Friday: 8:00 AM - 8:00 PM',
-        'Saturday: 9:00 AM - 5:00 PM',
+        'Monday - Saturday: 5:00 PM - 9:30 PM',
         'Sunday: Closed'
       ],
       color: 'bg-orange-50 text-orange-600',
