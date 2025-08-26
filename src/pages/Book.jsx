@@ -46,7 +46,7 @@ const Book = () => {
   const { user } = useAuth()
   const navigate = useNavigate()
 
-  const totalSteps = 5
+  const totalSteps = 4
 
   // Pre-fill user data if logged in
   useEffect(() => {
