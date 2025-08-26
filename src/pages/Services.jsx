@@ -13,7 +13,9 @@ import {
   Zap,
   Search,
   Filter,
-  ArrowRight
+  ArrowRight,
+  Calendar,
+  DollarSign
 } from 'lucide-react'
 import Button from '../components/ui/Button'
 import Card from '../components/ui/Card'
@@ -36,14 +38,14 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: "General Checkup & Cleaning",
+      title: "General Checkup",
       slug: "general-checkup",
       category: "general",
       icon: <CheckCircle className="w-8 h-8 text-primary-500" />,
-      description: "Comprehensive dental examination, professional cleaning, and preventive care to maintain optimal oral health.",
-      duration: "45-60 minutes",
-      price: "Starting at PKR 42,000",
-      features: ["Digital X-rays", "Thorough examination", "Professional cleaning", "Fluoride treatment", "Oral health consultation"],
+      description: "Routine dental examination to assess oral health and prevent future problems.",
+      duration: "10-15 minutes",
+      price: "1,000 PKR",
+      included: [],
       popular: true
     },
     {
@@ -52,22 +54,22 @@ const Services = () => {
       slug: "teeth-whitening",
       category: "cosmetic",
       icon: <Sparkles className="w-8 h-8 text-accent-yellow" />,
-      description: "Professional teeth whitening to achieve a brighter, more confident smile in just one visit.",
+      description: "Professional whitening for a brighter smile, including cleaning and polishing.",
       duration: "60-90 minutes",
-      price: "Starting at PKR 112,000",
-      features: ["Professional-grade whitening gel", "Custom-fitted trays", "Up to 8 shades lighter", "Long-lasting results", "Touch-up kit included"],
+      price: "30,000 PKR",
+      included: ["Scaling", "Polishing", "Teeth whitening"],
       popular: true
     },
     {
       id: 3,
-      title: "Orthodontics & Braces",
+      title: "Orthodontics and Braces",
       slug: "orthodontics",
       category: "orthodontics",
       icon: <Smile className="w-8 h-8 text-accent-teal" />,
-      description: "Straighten your teeth with traditional braces, clear aligners, or Invisalign for a perfect smile.",
-      duration: "12-24 months treatment",
-      price: "Starting at PKR 980,000",
-      features: ["Traditional metal braces", "Clear ceramic braces", "Invisalign aligners", "Regular adjustments", "Retainer included"],
+      description: "Comprehensive treatment for teeth alignment using braces.",
+      duration: "12 months",
+      price: "180,000 PKR",
+      included: ["Treatment planning", "Braces installation", "Regular adjustments", "Retention phase"],
       popular: false
     },
     {
@@ -76,10 +78,10 @@ const Services = () => {
       slug: "dental-implants",
       category: "oral-surgery",
       icon: <Heart className="w-8 h-8 text-red-500" />,
-      description: "Permanent solution for missing teeth with titanium implants that look and feel natural.",
-      duration: "3-6 months process",
-      price: "Starting at PKR 700,000",
-      features: ["Titanium implant post", "Custom crown", "Bone grafting if needed", "3D imaging", "Lifetime warranty"],
+      description: "Permanent solutions for missing teeth with high-quality implants.",
+      duration: "Multiple visits",
+      price: "75,000 PKR",
+      included: ["Consultation", "Implant placement", "Crown attachment"],
       popular: true
     },
     {
@@ -88,10 +90,10 @@ const Services = () => {
       slug: "root-canal",
       category: "general",
       icon: <Shield className="w-8 h-8 text-primary-500" />,
-      description: "Pain-free root canal treatment to save infected or damaged teeth and prevent extraction.",
-      duration: "60-90 minutes",
-      price: "Starting at PKR 224,000",
-      features: ["Digital imaging", "Local anesthesia", "Gentle technique", "Same-day completion", "Crown placement available"],
+      description: "Treatment to save and repair damaged or infected teeth.",
+      duration: "30 minutes",
+      price: "12,000 PKR",
+      included: ["Local anesthesia", "Root cleaning", "Filling", "Temporary crown if needed"],
       popular: false
     },
     {
@@ -100,22 +102,23 @@ const Services = () => {
       slug: "emergency",
       category: "emergency",
       icon: <Clock className="w-8 h-8 text-red-600" />,
-      description: "24/7 emergency dental services for urgent problems like severe pain, trauma, or infections.",
-      duration: "Immediate care",
-      price: "Starting at PKR 56,000",
-      features: ["24/7 availability", "Same-day appointments", "Pain management", "Trauma treatment", "Follow-up care"],
+      description: "Urgent care for dental emergencies, with pricing based on treatment required.",
+      duration: "Varies",
+      price: "Varies depending on emergency type",
+      included: ["Emergency consultation", "Pain management", "Immediate treatment"],
+      note: "Clinic is not available 24/7",
       popular: false
     },
     {
       id: 7,
-      title: "Dental Crowns & Bridges",
+      title: "Dental Crowns and Bridges",
       slug: "crowns-bridges",
       category: "general",
       icon: <Shield className="w-8 h-8 text-accent-teal" />,
-      description: "Restore damaged teeth or replace missing ones with custom-made crowns and bridges.",
+      description: "Restorative solutions for damaged or missing teeth using high-quality crowns and bridges.",
       duration: "2-3 visits",
-      price: "Starting at PKR 336,000",
-      features: ["Porcelain crowns", "Metal-free options", "Perfect color matching", "Digital impressions", "Same-day crowns available"],
+      price: "12,000 PKR",
+      included: ["Zirconia crown", "E-max crown", "Die-cut crown"],
       popular: false
     },
     {
@@ -124,10 +127,10 @@ const Services = () => {
       slug: "gum-treatment",
       category: "general",
       icon: <Stethoscope className="w-8 h-8 text-primary-500" />,
-      description: "Comprehensive periodontal therapy to treat gum disease and restore gum health.",
-      duration: "Multiple visits",
-      price: "Starting at PKR 84,000",
-      features: ["Deep cleaning", "Scaling & root planing", "Antibiotic therapy", "Gum surgery if needed", "Maintenance program"],
+      description: "Treatment to address gum infections and promote oral health.",
+      duration: "45-60 minutes",
+      price: "5,000 PKR",
+      included: ["Deep curettage", "Gum cleaning", "Aftercare instructions"],
       popular: false
     },
     {
@@ -136,10 +139,11 @@ const Services = () => {
       slug: "pediatric",
       category: "pediatric",
       icon: <Baby className="w-8 h-8 text-accent-yellow" />,
-      description: "Specialized dental care for children in a fun, comfortable environment with gentle techniques.",
+      description: "Gentle dental care tailored for children.",
       duration: "30-45 minutes",
-      price: "Starting at PKR 33,600",
-      features: ["Child-friendly environment", "Nitrous oxide available", "Preventive treatments", "Sealants", "Education for parents"],
+      price: "8,000 PKR",
+      included: ["General pediatric dental care", "Preventive treatments", "Child-friendly approach"],
+      note: "Nitrous oxide not included",
       popular: false
     },
     {
@@ -148,35 +152,24 @@ const Services = () => {
       slug: "oral-surgery",
       category: "oral-surgery",
       icon: <Zap className="w-8 h-8 text-red-500" />,
-      description: "Comprehensive oral surgery including wisdom teeth removal, extractions, and implant placement.",
-      duration: "30-120 minutes",
-      price: "Starting at PKR 112,000",
-      features: ["Wisdom teeth removal", "Tooth extractions", "Bone grafting", "Sedation options", "Post-op care"],
+      description: "Surgical procedures for complex oral conditions, including trauma cases.",
+      duration: "30 minutes",
+      price: "3,000 PKR",
+      included: ["Trauma cases", "Surgical consultation", "Post-operative care"],
+      note: "Bone grafting not included",
       popular: false
     },
     {
       id: 11,
-      title: "Cosmetic Veneers",
-      slug: "veneers",
+      title: "Cosmetic Surgery",
+      slug: "cosmetic-surgery",
       category: "cosmetic",
       icon: <Sparkles className="w-8 h-8 text-accent-yellow" />,
-      description: "Transform your smile with custom porcelain veneers for a perfect, natural-looking result.",
-      duration: "2-3 visits",
-      price: "Starting at PKR 420,000",
-      features: ["Ultra-thin porcelain", "Custom design", "Natural appearance", "Stain resistant", "10-year warranty"],
+      description: "Aesthetic enhancements using advanced CAD/CAM technology for precise results.",
+      duration: "2-3 hours",
+      price: "30,000 PKR",
+      included: ["CAD/CAM scanning procedure", "Digital planning", "Precision treatment"],
       popular: true
-    },
-    {
-      id: 12,
-      title: "Sleep Apnea Treatment",
-      slug: "sleep-apnea",
-      category: "general",
-      icon: <Clock className="w-8 h-8 text-primary-500" />,
-      description: "Custom oral appliances to treat sleep apnea and improve your quality of sleep.",
-      duration: "2-3 visits",
-      price: "Starting at PKR 560,000",
-      features: ["Sleep study analysis", "Custom oral appliance", "Comfortable design", "Regular adjustments", "Insurance coverage help"],
-      popular: false
     }
   ]
 
@@ -201,7 +194,7 @@ const Services = () => {
               Our Dental Services
             </h1>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-8">
-              Comprehensive dental care tailored to your needs. From routine checkups to advanced treatments, 
+              Comprehensive dental care with transparent pricing. From routine checkups to advanced treatments, 
               we provide exceptional care in a comfortable environment.
             </p>
             <Button
@@ -209,9 +202,10 @@ const Services = () => {
               to="/book"
               variant="secondary"
               size="lg"
+              icon={<Calendar size={20} />}
               className="bg-white text-primary-600 hover:bg-neutral-50"
             >
-              Book Consultation
+              Book Appointment
             </Button>
           </motion.div>
         </div>
@@ -280,70 +274,78 @@ const Services = () => {
                       Popular
                     </div>
                   )}
-                  <Card className="h-full p-6 group cursor-pointer">
-                    <Link to={`/services/${service.slug}`}>
+                  <Card className="h-full p-6 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div className="text-center">
+                      {/* Service Icon */}
                       <div className="mb-6 flex justify-center">
                         <div className="p-4 bg-neutral-50 dark:bg-neutral-800 rounded-2xl group-hover:scale-110 transition-transform duration-300">
                           {service.icon}
                         </div>
                       </div>
                       
-                      <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-3 text-center">
+                      {/* Service Title */}
+                      <h3 className="text-xl font-semibold text-neutral-900 dark:text-white mb-3">
                         {service.title}
                       </h3>
                       
-                      <p className="text-neutral-600 dark:text-neutral-300 mb-4 text-center">
+                      {/* Service Description */}
+                      <p className="text-neutral-600 dark:text-neutral-300 mb-6 text-sm leading-relaxed">
                         {service.description}
                       </p>
 
+                      {/* Price and Duration */}
                       <div className="space-y-3 mb-6">
-                        <div className="flex justify-between text-sm">
-                          <span className="text-neutral-500 dark:text-neutral-400">Duration:</span>
-                          <span className="font-medium text-neutral-900 dark:text-white">{service.duration}</span>
+                        <div className="flex items-center justify-center space-x-4">
+                          <div className="flex items-center text-primary-600 dark:text-primary-400">
+                            <DollarSign className="w-4 h-4 mr-1" />
+                            <span className="font-bold text-lg">{service.price}</span>
+                          </div>
                         </div>
-                        <div className="flex justify-between text-sm">
-                          <span className="text-neutral-500 dark:text-neutral-400">Price:</span>
-                          <span className="font-medium text-primary-600 dark:text-primary-400">{service.price}</span>
+                        <div className="flex items-center justify-center text-neutral-600 dark:text-neutral-300">
+                          <Clock className="w-4 h-4 mr-2" />
+                          <span className="text-sm">{service.duration}</span>
                         </div>
                       </div>
 
-                      <div className="space-y-2 mb-6">
-                        <p className="text-sm font-medium text-neutral-900 dark:text-white">What's included:</p>
-                        <ul className="space-y-1">
-                          {service.features.slice(0, 3).map((feature, i) => (
-                            <li key={i} className="text-sm text-neutral-600 dark:text-neutral-300 flex items-center">
-                              <CheckCircle size={14} className="text-accent-teal mr-2 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ))}
-                          {service.features.length > 3 && (
-                            <li className="text-sm text-primary-600 dark:text-primary-400">
-                              +{service.features.length - 3} more features
-                            </li>
-                          )}
-                        </ul>
-                      </div>
+                      {/* Included Procedures */}
+                      {service.included && service.included.length > 0 && (
+                        <div className="mb-6">
+                          <p className="text-sm font-medium text-neutral-900 dark:text-white mb-3">What's included:</p>
+                          <ul className="space-y-2">
+                            {service.included.map((item, i) => (
+                              <li key={i} className="text-sm text-neutral-600 dark:text-neutral-300 flex items-center justify-center">
+                                <CheckCircle size={14} className="text-accent-teal mr-2 flex-shrink-0" />
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
 
-                      <div className="flex items-center justify-between">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="flex-1 mr-3"
-                        >
-                          Learn More
-                        </Button>
+                      {/* Special Notes */}
+                      {service.note && (
+                        <div className="mb-6 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+                          <p className="text-sm text-amber-800 dark:text-amber-200">
+                            <strong>Note:</strong> {service.note}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Book Appointment Button */}
+                      <div className="mt-auto">
                         <Button
                           as={Link}
                           to="/book"
                           variant="primary"
-                          size="sm"
-                          icon={<ArrowRight size={16} />}
-                          iconPosition="right"
+                          size="md"
+                          fullWidth
+                          icon={<Calendar size={16} />}
+                          className="group-hover:bg-primary-600 group-hover:shadow-lg transition-all duration-300"
                         >
-                          Book Now
+                          Book Appointment
                         </Button>
                       </div>
-                    </Link>
+                    </div>
                   </Card>
                 </motion.div>
               ))}
@@ -374,17 +376,9 @@ const Services = () => {
                 to="/book"
                 variant="primary"
                 size="lg"
-                icon={<CheckCircle size={20} />}
+                icon={<Calendar size={20} />}
               >
-                Free Consultation
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                icon={<Clock size={20} />}
-                href="tel:+1-555-123-4567"
-              >
-                Call Us: (555) 123-4567
+                Schedule Consultation
               </Button>
             </div>
           </motion.div>
