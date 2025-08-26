@@ -273,7 +273,7 @@ const Services = () => {
                       Popular
                     </div>
                   )}
-                  <Card className="h-full p-6 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                  <Card className="h-full p-4 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
                     <div className="text-center">
                       {/* Service Icon */}
                       <div className="mb-6 flex justify-center">
