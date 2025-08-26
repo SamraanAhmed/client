@@ -516,10 +516,10 @@ const Book = () => {
               </motion.div>
             )}
 
-            {/* Step 5: Confirmation */}
-            {currentStep === 5 && (
+            {/* Step 4: Confirmation */}
+            {currentStep === 4 && (
               <motion.div
-                key="step5"
+                key="step4"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
