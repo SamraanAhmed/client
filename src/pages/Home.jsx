@@ -153,11 +153,11 @@ const Home = () => {
             <div className="flex flex-wrap justify-center items-center gap-8 text-sm">
               <div className="flex items-center space-x-2">
                 <Award className="w-5 h-5 text-accent-yellow" />
-                <span>10+ Years Experience</span>
+                <span>5+ Years Experience</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Star className="w-5 h-5 text-accent-yellow" />
-                <span>4.9★ from 500+ Reviews</span>
+                <span>5-Star Rating</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Shield className="w-5 h-5 text-accent-teal" />
