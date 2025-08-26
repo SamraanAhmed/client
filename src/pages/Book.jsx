@@ -287,7 +287,7 @@ const Book = () => {
         {/* Progress Bar */}
         <div className="mb-12">
           <div className="flex justify-between items-center mb-4">
-            {[1, 2, 3, 4, 5].map((step) => (
+            {[1, 2, 3, 4].map((step) => (
               <div key={step} className="flex items-center">
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold ${
                   step <= currentStep
