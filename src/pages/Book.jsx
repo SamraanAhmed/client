@@ -309,7 +309,6 @@ const Book = () => {
           <div className="flex justify-between text-sm text-neutral-600 dark:text-neutral-300">
             <span>Service</span>
             <span>Specialist</span>
-            <span>Date & Time</span>
             <span>Details</span>
             <span>Confirm</span>
           </div>
