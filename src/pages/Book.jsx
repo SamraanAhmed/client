@@ -102,42 +102,6 @@ const Book = () => {
     }
   ]
 
-  // Generate available dates (next 14 days, excluding Sundays)
-  const generateAvailableDates = () => {
-    const dates = []
-    const today = new Date()
-    
-    for (let i = 1; i <= 21; i++) {
-      const date = new Date(today)
-      date.setDate(today.getDate() + i)
-      
-      // Skip Sundays (0 = Sunday)
-      if (date.getDay() !== 0) {
-        dates.push(date)
-      }
-      
-      if (dates.length >= 14) break
-    }
-    
-    return dates
-  }
-
-  // Generate available time slots
-  const generateTimeSlots = () => {
-    const slots = []
-    const startHour = 10
-    const endHour = 20
-    
-    for (let hour = startHour; hour < endHour; hour++) {
-      slots.push(`${hour.toString().padStart(2, '0')}:00`)
-      slots.push(`${hour.toString().padStart(2, '0')}:30`)
-    }
-    
-    return slots
-  }
-
-  const availableDates = generateAvailableDates()
-  const timeSlots = generateTimeSlots()
 
   // Filter specialists based on selected service
   const filteredSpecialists = formData.service 
