@@ -296,7 +296,7 @@ const Book = () => {
                 }`}>
                   {step}
                 </div>
-                {step < 5 && (
+                {step < 4 && (
                   <div className={`h-1 w-full mx-2 ${
                     step < currentStep
                       ? 'bg-primary-500'
