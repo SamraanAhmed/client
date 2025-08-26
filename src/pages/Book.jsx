@@ -577,13 +577,13 @@ const Book = () => {
                     <Shield className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-1">
-                        Our Commitment to You
+                        What Happens Next
                       </h4>
                       <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
-                        <li>• Free cancellation up to 24 hours before appointment</li>
+                        <li>• Our team will contact you within 24 hours</li>
+                        <li>• We'll schedule your appointment at a convenient time</li>
                         <li>• All safety protocols followed (sterilization, PPE)</li>
-                        <li>• Flexible rescheduling options available</li>
-                        <li>• Insurance verification before visit</li>
+                        <li>• Flexible scheduling to fit your needs</li>
                       </ul>
                     </div>
                   </div>
