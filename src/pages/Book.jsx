@@ -200,66 +200,20 @@ const Book = () => {
           <div className="w-20 h-20 bg-accent-teal rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-12 h-12 text-white" />
           </div>
-          
+
           <h1 className="text-3xl font-bold font-heading text-neutral-900 dark:text-white mb-4">
-            Booking Confirmed!
+            Thank You!
           </h1>
-          
+
           <p className="text-lg text-neutral-600 dark:text-neutral-300 mb-8">
-            Your appointment has been successfully scheduled. We've sent a confirmation email with all the details.
+            Thank you for your submission! We will contact you shortly to confirm your booking.
           </p>
-
-          <Card className="p-6 mb-8 text-left">
-            <h3 className="font-semibold text-neutral-900 dark:text-white mb-4">Appointment Details</h3>
-            <div className="space-y-3 text-sm">
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Booking ID:</span>
-                <span className="font-mono font-bold text-primary-600">{bookingId}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Service:</span>
-                <span className="font-medium">{getSelectedService()?.name}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Doctor:</span>
-                <span className="font-medium">{getSelectedSpecialist()?.name}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Date & Time:</span>
-                <span className="font-medium">{formData.date} at {formData.time}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Duration:</span>
-                <span className="font-medium">{getSelectedService()?.duration}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-neutral-600 dark:text-neutral-300">Price:</span>
-                <span className="font-medium text-primary-600">{getSelectedService()?.price}</span>
-              </div>
-            </div>
-          </Card>
-
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-8">
-            <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-2">What's Next?</h4>
-            <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1 text-left">
-              <li>• Check your email for confirmation and pre-visit forms</li>
-              <li>• Arrive 15 minutes early for your appointment</li>
-              <li>• Bring a valid ID and insurance card</li>
-              <li>• Download our mobile app for easy rescheduling</li>
-            </ul>
-          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => navigate('/dashboard')}
+              onClick={() => navigate('/')}
               variant="primary"
               icon={<User size={16} />}
-            >
-              View Dashboard
-            </Button>
-            <Button
-              onClick={() => navigate('/')}
-              variant="outline"
             >
               Back to Home
             </Button>
