@@ -343,9 +343,8 @@ const Book = () => {
                       <h3 className="font-semibold text-neutral-900 dark:text-white mb-2">
                         {service.name}
                       </h3>
-                      <div className="flex justify-between text-sm text-neutral-600 dark:text-neutral-300">
+                      <div className="text-sm text-neutral-600 dark:text-neutral-300">
                         <span>{service.duration}</span>
-                        <span className="font-medium text-primary-600">{service.price}</span>
                       </div>
                     </button>
                   ))}
