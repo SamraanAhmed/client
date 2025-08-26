@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Calendar, 
-  Clock, 
-  User, 
-  Phone, 
-  Mail, 
+import {
+  Calendar,
+  User,
+  Phone,
+  Mail,
   MessageSquare,
   CheckCircle,
   ChevronLeft,
   ChevronRight,
   Star,
-  MapPin,
   CreditCard,
   Shield
 } from 'lucide-react'
