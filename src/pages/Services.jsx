@@ -305,12 +305,12 @@ const Services = () => {
 
                       {/* Included Procedures */}
                       {service.included && service.included.length > 0 && (
-                        <div className="mb-6">
-                          <p className="text-sm font-medium text-neutral-900 dark:text-white mb-3">What's included:</p>
-                          <ul className="space-y-2">
+                        <div className="mb-4">
+                          <p className="text-sm font-medium text-neutral-900 dark:text-white mb-2">What's included:</p>
+                          <ul className="space-y-1">
                             {service.included.map((item, i) => (
-                              <li key={i} className="text-sm text-neutral-600 dark:text-neutral-300 flex items-center justify-center">
-                                <CheckCircle size={14} className="text-accent-teal mr-2 flex-shrink-0" />
+                              <li key={i} className="text-xs text-neutral-600 dark:text-neutral-300 flex items-center justify-center">
+                                <CheckCircle size={12} className="text-accent-teal mr-2 flex-shrink-0" />
                                 {item}
                               </li>
                             ))}
