@@ -178,10 +178,8 @@ const Book = () => {
       case 2:
         return formData.specialist !== ''
       case 3:
-        return formData.date !== '' && formData.time !== ''
-      case 4:
         return formData.firstName && formData.lastName && formData.email && formData.phone
-      case 5:
+      case 4:
         return true
       default:
         return false
