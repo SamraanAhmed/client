@@ -118,10 +118,10 @@ const Header = () => {
                 {/* Mobile Contact */}
                 <a
                   href="tel:+92-333-8353771"
-                  className="flex items-center justify-center space-x-2 px-4 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 bg-neutral-50 dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-all duration-200"
+                  className="flex items-center justify-center space-x-2 px-4 py-3 text-sm font-semibold bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 border-2 border-primary-200 dark:border-primary-700 rounded-xl hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-800 dark:hover:text-primary-200 transition-all duration-200 shadow-sm hover:shadow-md"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Phone size={16} />
+                  <Phone size={18} className="text-primary-600 dark:text-primary-400" />
                   <span>Call: 0333 8353771</span>
                 </a>
 
