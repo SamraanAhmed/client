@@ -60,7 +60,7 @@ const Logo = ({ className = "h-8 w-auto", variant = "default" }) => {
         fontSize="18"
         fill={currentColors.primary}
       >
-        Krachi
+        Karachi
       </text>
       <text
         x="55"
