@@ -115,7 +115,15 @@ const Header = () => {
               ))}
               
               <div className="pt-4 border-t border-neutral-200 dark:border-neutral-700 space-y-3">
-
+                {/* Mobile Contact */}
+                <a
+                  href="tel:+92-333-8353771"
+                  className="flex items-center justify-center space-x-2 px-4 py-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 bg-neutral-50 dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-all duration-200"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Phone size={16} />
+                  <span>Call: 0333 8353771</span>
+                </a>
 
                 <Button
                   variant="primary"
@@ -124,6 +132,7 @@ const Header = () => {
                   as={Link}
                   to="/book"
                   onClick={() => setIsMenuOpen(false)}
+                  className="shadow-sm"
                 >
                   Book Appointment
                 </Button>
