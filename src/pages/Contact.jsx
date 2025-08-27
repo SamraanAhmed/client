@@ -497,7 +497,7 @@ const Contact = () => {
                 className="group"
               >
                 <Card className="p-6 h-full hover:shadow-xl transition-all duration-300 border-0 bg-white">
-                  <div className="text-center">
+                  <div className="text-center h-full flex flex-col">
                     <div
                       className={`inline-flex p-4 rounded-2xl ${info.color} mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
@@ -509,22 +509,24 @@ const Contact = () => {
                     <p className="text-sm text-neutral-500 mb-4">
                       {info.subtitle}
                     </p>
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-6 flex-grow">
                       {info.details.map((detail, i) => (
                         <p key={i} className="text-sm text-neutral-700">
                           {detail}
                         </p>
                       ))}
                     </div>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      href={info.action.href}
-                      icon={info.action.icon}
-                      className="group-hover:bg-primary-500 group-hover:text-white group-hover:border-primary-500 transition-all duration-300"
-                    >
-                      {info.action.text}
-                    </Button>
+                    <div className="mt-auto">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        href={info.action.href}
+                        icon={info.action.icon}
+                        className="group-hover:bg-primary-500 group-hover:text-white group-hover:border-primary-500 transition-all duration-300"
+                      >
+                        {info.action.text}
+                      </Button>
+                    </div>
                   </div>
                 </Card>
               </motion.div>
