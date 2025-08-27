@@ -31,42 +31,14 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/98 dark:bg-neutral-900/98 backdrop-blur-md border-b border-neutral-200/80 dark:border-neutral-700/80 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-18">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center mr-6">
-              <Logo className="h-10 w-auto" variant={isDark ? 'white' : 'default'} />
-            </Link>
-
-            {/* Desktop Actions - Moved next to logo */}
-            <div className="hidden lg:flex items-center space-x-2">
-              {/* WhatsApp Contact */}
-              <a
-                href="https://wa.me/923338353771"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-3 py-2 text-sm font-semibold bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-700 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 hover:text-green-800 dark:hover:text-green-200 transition-all duration-200 shadow-sm hover:shadow-md"
-              >
-                <MessageCircle size={16} className="text-green-600 dark:text-green-400" />
-                <span className="hidden xl:inline">WhatsApp</span>
-              </a>
-
-              {/* Book Appointment CTA */}
-              <Button
-                as={Link}
-                to="/book"
-                variant="primary"
-                size="sm"
-                icon={<Calendar size={16} />}
-                className="shadow-sm hover:shadow-md transition-shadow duration-200"
-              >
-                Book Now
-              </Button>
-            </div>
-          </div>
+        <div className="flex items-center justify-between h-18">
+          {/* Logo - Left Side */}
+          <Link to="/" className="flex items-center">
+            <Logo className="h-10 w-auto" variant={isDark ? 'white' : 'default'} />
+          </Link>
 
           {/* Desktop Navigation - Centered */}
-          <nav className="hidden lg:flex items-center space-x-2 flex-1 justify-center">
+          <nav className="hidden lg:flex items-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -82,10 +54,36 @@ const Header = () => {
             ))}
           </nav>
 
+          {/* Desktop Actions - Right Side */}
+          <div className="hidden lg:flex items-center space-x-3">
+            {/* WhatsApp Contact */}
+            <a
+              href="https://wa.me/923338353771"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 px-3 py-2 text-sm font-semibold bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-700 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 hover:text-green-800 dark:hover:text-green-200 transition-all duration-200 shadow-sm hover:shadow-md"
+            >
+              <MessageCircle size={16} className="text-green-600 dark:text-green-400" />
+              <span className="hidden xl:inline">WhatsApp</span>
+            </a>
+
+            {/* Book Appointment CTA */}
+            <Button
+              as={Link}
+              to="/book"
+              variant="primary"
+              size="sm"
+              icon={<Calendar size={16} />}
+              className="shadow-sm hover:shadow-md transition-shadow duration-200"
+            >
+              Book Now
+            </Button>
+          </div>
+
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-3 rounded-xl text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 border border-neutral-200 dark:border-neutral-700 hover:border-primary-300 dark:hover:border-primary-700 ml-auto"
+            className="lg:hidden p-3 rounded-xl text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 border border-neutral-200 dark:border-neutral-700 hover:border-primary-300 dark:hover:border-primary-700"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
