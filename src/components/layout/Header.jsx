@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Phone, Calendar, Moon, Sun } from 'lucide-react'
+import { Menu, X, Phone, Calendar, Moon, Sun, MessageCircle } from 'lucide-react'
 import Logo from '../common/Logo'
 import Button from '../ui/Button'
 import { useAuth } from '../../contexts/AuthContext'
