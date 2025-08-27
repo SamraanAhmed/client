@@ -55,8 +55,15 @@ const Header = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
-
+          <div className="hidden lg:flex items-center space-x-3">
+            {/* Contact Phone */}
+            <a
+              href="tel:+92-333-8353771"
+              className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+            >
+              <Phone size={16} />
+              <span className="hidden xl:inline">0333 8353771</span>
+            </a>
 
             {/* Book Appointment CTA */}
             <Button
@@ -65,6 +72,7 @@ const Header = () => {
               variant="primary"
               size="sm"
               icon={<Calendar size={16} />}
+              className="shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               Book Now
             </Button>
