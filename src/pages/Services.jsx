@@ -312,7 +312,7 @@ const Services = () => {
                     </div>
                   )}
                   <Card className="h-full p-4 group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div className="text-center">
+                    <div className="text-center h-full flex flex-col">
                       {/* Service Icon */}
                       <div className="mb-4 flex justify-center">
                         <div className="p-3 bg-neutral-50 dark:bg-neutral-800 rounded-2xl group-hover:scale-110 transition-transform duration-300">
@@ -343,40 +343,43 @@ const Services = () => {
                         </div>
                       </div>
 
-                      {/* Included Procedures */}
-                      {service.included && service.included.length > 0 && (
-                        <div className="mb-4">
-                          <p className="text-sm font-medium text-neutral-900 dark:text-white mb-2">
-                            What's included:
-                          </p>
-                          <ul className="space-y-1">
-                            {service.included.map((item, i) => (
-                              <li
-                                key={i}
-                                className="text-xs text-neutral-600 dark:text-neutral-300 flex items-center justify-center"
-                              >
-                                <CheckCircle
-                                  size={12}
-                                  className="text-accent-teal mr-2 flex-shrink-0"
-                                />
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
+                      {/* Content that grows to fill space */}
+                      <div className="flex-grow">
+                        {/* Included Procedures */}
+                        {service.included && service.included.length > 0 && (
+                          <div className="mb-4">
+                            <p className="text-sm font-medium text-neutral-900 dark:text-white mb-2">
+                              What's included:
+                            </p>
+                            <ul className="space-y-1">
+                              {service.included.map((item, i) => (
+                                <li
+                                  key={i}
+                                  className="text-xs text-neutral-600 dark:text-neutral-300 flex items-center justify-center"
+                                >
+                                  <CheckCircle
+                                    size={12}
+                                    className="text-accent-teal mr-2 flex-shrink-0"
+                                  />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
 
-                      {/* Special Notes */}
-                      {service.note && (
-                        <div className="mb-4 p-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
-                          <p className="text-xs text-amber-800 dark:text-amber-200">
-                            <strong>Note:</strong> {service.note}
-                          </p>
-                        </div>
-                      )}
+                        {/* Special Notes */}
+                        {service.note && (
+                          <div className="mb-4 p-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+                            <p className="text-xs text-amber-800 dark:text-amber-200">
+                              <strong>Note:</strong> {service.note}
+                            </p>
+                          </div>
+                        )}
+                      </div>
 
-                      {/* Book Appointment Button */}
-                      <div className="mt-auto">
+                      {/* Book Appointment Button - Always at bottom */}
+                      <div className="mt-auto pt-4">
                         <Button
                           as={Link}
                           to="/book"
