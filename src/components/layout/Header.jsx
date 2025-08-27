@@ -59,9 +59,9 @@ const Header = () => {
             {/* Contact Phone */}
             <a
               href="tel:+92-333-8353771"
-              className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+              className="flex items-center space-x-2 px-4 py-2 text-sm font-semibold bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-700 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-800 dark:hover:text-primary-200 transition-all duration-200 shadow-sm hover:shadow-md"
             >
-              <Phone size={16} />
+              <Phone size={16} className="text-primary-600 dark:text-primary-400" />
               <span className="hidden xl:inline">0333 8353771</span>
             </a>
 
