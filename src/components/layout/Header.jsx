@@ -119,14 +119,16 @@ const Header = () => {
               ))}
               
               <div className="pt-4 border-t border-neutral-200 dark:border-neutral-700 space-y-3">
-                {/* Mobile Contact */}
+                {/* Mobile WhatsApp Contact */}
                 <a
-                  href="tel:+92-333-8353771"
-                  className="flex items-center justify-center space-x-2 px-4 py-3 text-sm font-semibold bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 border-2 border-primary-200 dark:border-primary-700 rounded-xl hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-800 dark:hover:text-primary-200 transition-all duration-200 shadow-sm hover:shadow-md"
+                  href="https://wa.me/923338353771"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center space-x-2 px-4 py-3 text-sm font-semibold bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 border-2 border-green-200 dark:border-green-700 rounded-xl hover:bg-green-100 dark:hover:bg-green-900/30 hover:text-green-800 dark:hover:text-green-200 transition-all duration-200 shadow-sm hover:shadow-md"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <Phone size={18} className="text-primary-600 dark:text-primary-400" />
-                  <span>Call: 0333 8353771</span>
+                  <MessageCircle size={18} className="text-green-600 dark:text-green-400" />
+                  <span>Chat on WhatsApp</span>
                 </a>
 
                 <Button
