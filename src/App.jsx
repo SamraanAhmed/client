@@ -33,6 +33,7 @@ function App() {
     <ThemeProvider>
       <AuthProvider>
         <Router>
+          <ScrollToTop />
           <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 transition-colors duration-300">
             <FloatingActionButtons />
             <Header />
