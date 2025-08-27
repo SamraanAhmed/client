@@ -5,6 +5,7 @@ import { ThemeProvider } from './contexts/ThemeContext'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import FloatingActionButtons from './components/common/FloatingActionButtons'
+import ScrollToTop from './components/common/ScrollToTop'
 import ProtectedRoute from './components/auth/ProtectedRoute'
 
 // Pages
@@ -32,6 +33,7 @@ function App() {
     <ThemeProvider>
       <AuthProvider>
         <Router>
+          <ScrollToTop />
           <div className="min-h-screen bg-neutral-50 dark:bg-neutral-900 transition-colors duration-300">
             <FloatingActionButtons />
             <Header />

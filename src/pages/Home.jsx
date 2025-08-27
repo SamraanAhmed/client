@@ -81,6 +81,12 @@ const Home = () => {
       description:
         'Board-certified dentists with years of specialized experience.',
     },
+    {
+      icon: <Heart className="w-6 h-6 text-red-500" />,
+      title: 'Affordable Pricing',
+      description:
+        'Transparent pricing with flexible payment options for quality dental care.',
+    },
   ];
 
   const specialists = [

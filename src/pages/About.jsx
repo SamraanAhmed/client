@@ -52,34 +52,64 @@ const About = () => {
 
   const team = [
     {
-      name: 'Dr. Sarah Johnson',
-      title: 'Founder & Lead Dentist',
-      specialty: 'General & Cosmetic Dentistry',
+      name: 'Dr. Ahmed Sheikh',
+      title: 'Oral and Maxillofacial Surgery Specialist',
+      specialty: 'Oral and Maxillofacial Surgery',
       experience: '15+ years',
-      education: 'DDS, Columbia University',
-      image:
-        'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face',
-      bio: 'Dr. Johnson founded Karachi Dental Clinic with a vision to provide exceptional dental care in a warm, welcoming environment. She specializes in cosmetic dentistry and is known for her gentle approach.',
-    },
-    {
-      name: 'Dr. Michael Chen',
-      title: 'Orthodontic Specialist',
-      specialty: 'Orthodontics & Invisalign',
-      experience: '12+ years',
-      education: 'DDS, MSc Orthodontics, NYU',
+      education: 'Specialized in Oral and Maxillofacial Surgery',
       image:
         'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&h=300&fit=crop&crop=face',
-      bio: 'Dr. Chen is our orthodontic specialist with extensive experience in traditional braces and Invisalign. He has helped thousands of patients achieve their perfect smile.',
+      bio: 'Specialized in complex oral and facial surgical procedures with advanced techniques for optimal patient outcomes and recovery.',
     },
     {
-      name: 'Dr. Emily Rodriguez',
-      title: 'Oral Surgeon',
-      specialty: 'Oral Surgery & Implants',
+      name: 'Dr. Tayyab Sheikh',
+      title: 'Prosthodontics & Endodontics Specialist',
+      specialty: 'Prosthodontics & Endodontics',
+      experience: '12+ years',
+      education: 'FCPS in Prosthodontics, Certified Endodontist',
+      image:
+        'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=300&h=300&fit=crop&crop=face',
+      bio: 'Expert in dental prosthetics and root canal therapy, combining precision craftsmanship with advanced endodontic techniques.',
+    },
+    {
+      name: 'Dr. Jawad',
+      title: 'Professional Orthodontist',
+      specialty: 'Orthodontics',
       experience: '10+ years',
-      education: 'DDS, Oral Surgery Residency, UCSF',
+      education: 'Professional Orthodontist',
+      image:
+        'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face',
+      bio: 'Dedicated to creating beautiful, straight smiles using modern orthodontic techniques and personalized treatment plans.',
+    },
+    {
+      name: 'Dr. Nizam',
+      title: 'Professional Maxillofacial Surgeon',
+      specialty: 'Maxillofacial Surgery',
+      experience: '14+ years',
+      education: 'Professional Maxillofacial Surgeon',
+      image:
+        'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=300&h=300&fit=crop&crop=face',
+      bio: 'Specializes in facial and jaw surgery procedures, providing comprehensive care for complex oral and facial conditions.',
+    },
+    {
+      name: 'Dr. Anosha',
+      title: 'General Pediatric Dentist',
+      specialty: 'Pediatric Dentistry',
+      experience: '8+ years',
+      education: 'General Pediatric Dentist',
       image:
         'https://images.unsplash.com/photo-1594824804732-5f7cf38f9baa?w=300&h=300&fit=crop&crop=face',
-      bio: 'Dr. Rodriguez specializes in oral surgery and dental implants. Her precise surgical techniques and caring approach make complex procedures comfortable for patients.',
+      bio: "Gentle and caring approach to children's dental health, making dental visits comfortable and fun for young patients.",
+    },
+    {
+      name: 'Dr. Hajra Kaleem',
+      title: 'Operative Dentistry Specialist',
+      specialty: 'Operative Dentistry',
+      experience: '11+ years',
+      education: 'FCPS in Operative Dentistry, Certified Dentition Specialist',
+      image:
+        'https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=300&h=300&fit=crop&crop=face',
+      bio: 'Expert in restorative and cosmetic dentistry procedures, focusing on preserving natural teeth with advanced techniques.',
     },
   ];
 
@@ -296,7 +326,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
