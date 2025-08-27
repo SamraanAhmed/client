@@ -31,14 +31,40 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/98 dark:bg-neutral-900/98 backdrop-blur-md border-b border-neutral-200/80 dark:border-neutral-700/80 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18">
+        <div className="flex items-center h-18">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <Logo className="h-10 w-auto" variant={isDark ? 'white' : 'default'} />
-          </Link>
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center mr-6">
+              <Logo className="h-10 w-auto" variant={isDark ? 'white' : 'default'} />
+            </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-2">
+            {/* Desktop Actions - Moved next to logo */}
+            <div className="hidden lg:flex items-center space-x-2">
+              {/* Contact Phone */}
+              <a
+                href="tel:+92-333-8353771"
+                className="flex items-center space-x-2 px-3 py-2 text-sm font-semibold bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-700 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-800 dark:hover:text-primary-200 transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                <Phone size={16} className="text-primary-600 dark:text-primary-400" />
+                <span className="hidden xl:inline">0333 8353771</span>
+              </a>
+
+              {/* Book Appointment CTA */}
+              <Button
+                as={Link}
+                to="/book"
+                variant="primary"
+                size="sm"
+                icon={<Calendar size={16} />}
+                className="shadow-sm hover:shadow-md transition-shadow duration-200"
+              >
+                Book Now
+              </Button>
+            </div>
+          </div>
+
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex items-center space-x-2 flex-1 justify-center">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -54,29 +80,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-3">
-            {/* Contact Phone */}
-            <a
-              href="tel:+92-333-8353771"
-              className="flex items-center space-x-2 px-4 py-2 text-sm font-semibold bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-700 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-800 dark:hover:text-primary-200 transition-all duration-200 shadow-sm hover:shadow-md"
-            >
-              <Phone size={16} className="text-primary-600 dark:text-primary-400" />
-              <span className="hidden xl:inline">0333 8353771</span>
-            </a>
-
-            {/* Book Appointment CTA */}
-            <Button
-              as={Link}
-              to="/book"
-              variant="primary"
-              size="sm"
-              icon={<Calendar size={16} />}
-              className="shadow-sm hover:shadow-md transition-shadow duration-200"
-            >
-              Book Now
-            </Button>
-          </div>
+          {/* Spacer for balance */}
+          <div className="hidden lg:block" style={{width: '200px'}}></div>
 
           {/* Mobile menu button */}
           <button
